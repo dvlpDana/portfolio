@@ -1,3 +1,5 @@
+/* common css */
+
 @font-face {
   font-family: "pretendard-semibold";
   src: url("./fonts/Pretendard-SemiBold.ttf");
@@ -43,3 +45,121 @@
   --yellow-bg : #FEE1AD;
   --yellow-shadow : rgba(254, 225, 173, 0.16);
 }
+
+/* App */
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Introduce */
+
+.introCon {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introBox {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  background: #f0f0f0;
+  box-shadow:  0 0 0 #cccccc,
+               0 0 0 #ffffff,
+                10px 10px 10px #cccccc inset,
+                -10px -10px 10px #ffffff inset;
+  animation: introAni 3s cubic-bezier(0.16, 1, 0.3, 1) 1s alternate;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes introAni {
+  0% {
+    width: 100px;
+    height: 100px;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+  }
+  25% {
+    width: 100px;
+    height: 100px;
+    background: #f8f8f8;
+    box-shadow:  10px 10px 10px #cccccc,
+                 10px 10px 10px #ffffff,
+                 0 0 0 #cccccc inset,
+                 0 0 0 #ffffff inset;
+  }
+  50% {
+    width: 100px;
+    height: 350px;
+    background: #f8f8f8;
+    box-shadow:  10px 10px 10px #cccccc,
+                 10px 10px 10px #ffffff,
+                 0 0 0 #cccccc inset,
+                 0 0 0 #ffffff inset;
+  }
+  100% {
+    width: 70%;
+    height: 350px;
+    background: #fafafa;
+    box-shadow:  40px 40px 40px #cccccc,
+                 0 0 0 #ffffff,
+                 0 0 0 #cccccc inset,
+                 2px 2px 2px #ffffff inset;
+  }
+}
+
+.titleCon {
+  position: absolute;
+  top : 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "rokafSans-bold";
+  color : var(--gray);
+  line-height: 1.6;
+  font-size: 3vw;
+  animation: titleConAni 1s ease-in-out 3s forwards;
+}
+
+@keyframes titleConAni {
+  0%{
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(100%);
+  }
+}
+
+.englishTitle{
+  text-transform: uppercase;
+  font-size: 5vw;
+  color: transparent;
+  background: rgb(249,255,113);
+  background: linear-gradient(48deg, rgba(249,255,113,1) 0%, rgba(255,113,186,1) 33%, rgba(194,113,255,1) 66%, rgba(65,201,255,1) 100%);
+  -webkit-background-clip: text;
+  position:relative;
+}
+
+/* QuestionMark */
