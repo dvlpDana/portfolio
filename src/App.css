@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "pretendard-semibold";
+  src: url("./fonts/Pretendard-SemiBold.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "pretendard-medium";
+  src: url("./fonts/Pretendard-Medium.ttf");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "pretendard-extralight";
+  src: url("./fonts/Pretendard-ExtraLight.ttf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "rokafSans-bold";
+  src: url("./fonts/ROKAFSansBold.ttf");
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: "scdream-bold";
+  src: url("./fonts/SCDream9.otf");
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --gray : #505050;
+  --light-gray : #6B6B6B;
+  --font-color : #333333;
+  --pink-color : #ff6f91;
+  --pink-bg : #FFD0DB;
+  --pink-shadow : rgba(255, 111, 145, 0.16);
+  --violet-color : #845ec2;
+  --violet-bg : #E0D7EF;
+  --violet-shadow : rgba(132, 94, 194, 0.16);
+  --purple-color : #d65db1;
+  --purple-bg : #F5D6EC;
+  --purple-shadow : rgba(214, 93, 177, 0.16);
+  --orange-color : #ff9671;
+  --orange-bg : #FFDBCE;
+  --orange-shadow : rgba(255, 150, 113, 0.16);
+  --yellow-color : #ffc75f;
+  --yellow-bg : #FEE1AD;
+  --yellow-shadow : rgba(254, 225, 173, 0.16);
 }
