@@ -155,12 +155,17 @@ body {
 
 .englishTitle{
   text-transform: uppercase;
-  font-size: 4.5vw;
+  font-size: 4.75vw;
   color: transparent;
-  background: url(/public/img/gradation_bg.jpg) repeat;
-  background-position: 40% 50%;
+  background: url(/public/img/space_bg.jpg) repeat;
+  background-size: 100%;
+  background-position: center;
   -webkit-background-clip: text;
   position:relative;
+}
+
+.title strong {
+  color : black;
 }
 
 /* QuestionMark */

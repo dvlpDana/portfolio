@@ -97,15 +97,16 @@ class Introduce extends React.Component {
 
     return (
       <section className="introCon">
-        <div className="introBox">
-          <h1 className="titleCon" onMouseMove={this.handleMouseMove}>
+        <div className="introBox" onMouseMove={this.handleMouseMove}>
+          <h1 className="titleCon">
             <span className="title">사용성을 개선을 위해</span>
             <strong
               className="title englishTitle"
+              style={{backgroundPositionX:this.state.x * -4 / 50  + 50, backgroundPositionY:this.state.y * -4 / 50 + 50}}
             >
-              cirtical thinking {x} {y}
+              critical thinking
             </strong>
-            <span className="title">하는 개발자 심단비입니다.</span>
+            <span className="title">하는 <strong>개발자 심단비</strong>입니다.</span>
           </h1>
         </div>
       </section>
