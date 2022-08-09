@@ -52,6 +52,7 @@ html,
 body {
   position: relative;
   height: 100%;
+  color : var(--font-color);
 }
 
 .swiper {
@@ -105,7 +106,7 @@ body {
   }
   50% {
     width: 100px;
-    height: 350px;
+    height: 370px;
     background: #f8f8f8;
     box-shadow:  10px 10px 10px #cccccc,
                  10px 10px 10px #ffffff,
@@ -114,7 +115,7 @@ body {
   }
   100% {
     width: 70%;
-    height: 350px;
+    height: 370px;
     background: #fafafa;
     box-shadow:  40px 40px 40px #cccccc,
                  0 0 0 #ffffff,
@@ -139,7 +140,7 @@ body {
   font-family: "rokafSans-bold";
   color : var(--gray);
   line-height: 1.6;
-  font-size: 3vw;
+  font-size: 2.75vw;
   animation: titleConAni 1s ease-in-out 3s forwards;
 }
 
@@ -154,12 +155,38 @@ body {
 
 .englishTitle{
   text-transform: uppercase;
-  font-size: 5vw;
+  font-size: 4.5vw;
   color: transparent;
-  background: rgb(249,255,113);
-  background: linear-gradient(48deg, rgba(249,255,113,1) 0%, rgba(255,113,186,1) 33%, rgba(194,113,255,1) 66%, rgba(65,201,255,1) 100%);
+  background: url(/public/img/gradation_bg.jpg) repeat;
+  background-position: 40% 50%;
   -webkit-background-clip: text;
   position:relative;
 }
 
 /* QuestionMark */
+.secBg {
+  border: 1px solid red;
+  display: flex;
+  height: 100%;
+}
+
+.secBg > * {
+  flex: 1;
+  border: 1px solid blue;
+}
+
+.explainTxt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  line-height: 1.6;
+  font-family: "rokafSans-bold";
+  color : var(--gray);
+}
+
+.explainTxt strong {
+  color: black;
+  word-spacing: 1px;
+}
