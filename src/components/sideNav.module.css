@@ -1,0 +1,151 @@
+/* side-nav-menu */
+
+.sideNavCon {
+  position: fixed;
+  width: 50%;
+  max-width: 500px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideNavCon::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: white;
+  left: -10%;
+  border-radius: 40px / 500px;
+}
+
+.darkArea{
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.sideNav {
+  text-align: center;
+  font-family: "rokafSans-bold";
+  text-transform: uppercase;
+  line-height: 2.25;
+  font-size: 2.25rem;
+  padding-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+.sideNav li {
+  cursor: pointer;
+}
+
+.sideNav li:nth-of-type(1) {
+  color: var(--violet-color);
+}
+
+.sideNav li:nth-of-type(2) {
+  color: var(--purple-color);
+}
+
+.sideNav li:nth-of-type(3) {
+  color: var(--orange-color);
+}
+
+.sideNav li:nth-of-type(4) {
+  color: var(--yellow-color);
+}
+
+.sideNav::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--lightest-gray);
+}
+
+.linkBtnCon {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.linkBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.linkBtn span {
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.linkBtn button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border-style: none;
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.linkBtn img {
+  width: 50px;
+}
+
+.linkBtn:last-of-type img {
+  width: 40px;
+}
+
+.linkEmail {
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+  background-color: var(--gray);
+  border-radius: 2rem;
+  color: white;
+  font-family: "pretendard-medium";
+}
+
+.backBtn {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.backBtn span {
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: var(--light-gray);
+  top : 50%;
+  left: 50%;
+}
+
+.backBtn span:first-of-type {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.backBtn span:last-of-type {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

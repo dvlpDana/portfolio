@@ -1,0 +1,106 @@
+
+.introCon {
+  width: 100%;
+  height: 100%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.introBox {
+  border-radius: 20px;
+  width: 100px;
+  height: 100px;
+  background: #f7f7f7;
+  box-shadow:  0 0 0 #cccccc,
+               0 0 0 #ffffff,
+                10px 10px 10px #cccccc inset,
+                -10px -10px 10px #ffffff inset;
+  animation: introAni 3s cubic-bezier(0.16, 1, 0.3, 1) 1s alternate;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+
+@keyframes introAni {
+  0% {
+    width: 100px;
+    height: 100px;
+    background: #f0f0f0;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+  }
+  25% {
+    width: 100px;
+    height: 100px;
+    background: #f8f8f8;
+    box-shadow:  10px 10px 10px #cccccc,
+                 10px 10px 10px #ffffff,
+                 0 0 0 #cccccc inset,
+                 0 0 0 #ffffff inset;
+  }
+  50% {
+    width: 100px;
+    height: 370px;
+    background: #f8f8f8;
+    box-shadow:  10px 10px 10px #cccccc,
+                 10px 10px 10px #ffffff,
+                 0 0 0 #cccccc inset,
+                 0 0 0 #ffffff inset;
+  }
+  100% {
+    width: 70%;
+    height: 370px;
+    background: #fafafa;
+    box-shadow:  40px 40px 40px #cccccc,
+                 0 0 0 #ffffff,
+                 0 0 0 #cccccc inset,
+                 2px 2px 2px #ffffff inset;
+  }
+}
+
+.titleCon {
+  position: absolute;
+  top : 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "rokafSans-bold";
+  color : var(--gray);
+  line-height: 1.6;
+  font-size: 2.75vw;
+  animation: titleConAni 1s ease-in-out 3s forwards;
+}
+
+@keyframes titleConAni {
+  0%{
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100%{
+    transform: translate(-50%, -50%) scale(100%);
+  }
+}
+
+.englishTitle{
+  text-transform: uppercase;
+  font-size: 4.75vw;
+  color: transparent;
+  background: url(/public/img/gradation_bg.jpg) repeat;
+  background-position: center;
+  background-size: 200%;
+  -webkit-background-clip: text;
+  position:relative;
+}
+
+.title strong {
+  color : black;
+}

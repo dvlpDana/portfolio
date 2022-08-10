@@ -28,11 +28,13 @@
 :root {
   --gray : #505050;
   --light-gray : #6B6B6B;
+  --lightest-gray : #eaeaea;
   --font-color : #333333;
   --pink-color : #ff6f91;
   --pink-bg : #FFD0DB;
   --pink-shadow : rgba(255, 111, 145, 0.16);
   --violet-color : #845ec2;
+  --violot-dark-color : #482482;
   --violet-bg : #E0D7EF;
   --violet-shadow : rgba(132, 94, 194, 0.16);
   --purple-color : #d65db1;
@@ -42,156 +44,21 @@
   --orange-bg : #FFDBCE;
   --orange-shadow : rgba(255, 150, 113, 0.16);
   --yellow-color : #ffc75f;
+  --yellow-light-color : #fbf8f1;
   --yellow-bg : #FEE1AD;
   --yellow-shadow : rgba(254, 225, 173, 0.16);
+  --box-shadowing : 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* App */
 
-html,
 body {
-  position: relative;
-  height: 100%;
   color : var(--font-color);
+  font-family: "pretendard-extralight";
+  background: #f7f7f7;
 }
 
 .swiper {
   width: 100%;
   height: 100vh;
-}
-
-/* Introduce */
-
-.introCon {
-  width: 100%;
-  height: 100%;
-  background: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.introBox {
-  border-radius: 20px;
-  width: 100px;
-  height: 100px;
-  background: #f0f0f0;
-  box-shadow:  0 0 0 #cccccc,
-               0 0 0 #ffffff,
-                10px 10px 10px #cccccc inset,
-                -10px -10px 10px #ffffff inset;
-  animation: introAni 3s cubic-bezier(0.16, 1, 0.3, 1) 1s alternate;
-  animation-fill-mode: forwards;
-  position: relative;
-}
-
-@keyframes introAni {
-  0% {
-    width: 100px;
-    height: 100px;
-    background: #f0f0f0;
-    box-shadow:  0 0 0 #cccccc,
-                 0 0 0 #ffffff,
-                  10px 10px 10px #cccccc inset,
-                  -10px -10px 10px #ffffff inset;
-  }
-  25% {
-    width: 100px;
-    height: 100px;
-    background: #f8f8f8;
-    box-shadow:  10px 10px 10px #cccccc,
-                 10px 10px 10px #ffffff,
-                 0 0 0 #cccccc inset,
-                 0 0 0 #ffffff inset;
-  }
-  50% {
-    width: 100px;
-    height: 370px;
-    background: #f8f8f8;
-    box-shadow:  10px 10px 10px #cccccc,
-                 10px 10px 10px #ffffff,
-                 0 0 0 #cccccc inset,
-                 0 0 0 #ffffff inset;
-  }
-  100% {
-    width: 70%;
-    height: 370px;
-    background: #fafafa;
-    box-shadow:  40px 40px 40px #cccccc,
-                 0 0 0 #ffffff,
-                 0 0 0 #cccccc inset,
-                 2px 2px 2px #ffffff inset;
-  }
-}
-
-.titleCon {
-  position: absolute;
-  top : 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  font-family: "rokafSans-bold";
-  color : var(--gray);
-  line-height: 1.6;
-  font-size: 2.75vw;
-  animation: titleConAni 1s ease-in-out 3s forwards;
-}
-
-@keyframes titleConAni {
-  0%{
-    transform: translate(-50%, -50%) scale(0);
-  }
-  100%{
-    transform: translate(-50%, -50%) scale(100%);
-  }
-}
-
-.englishTitle{
-  text-transform: uppercase;
-  font-size: 4.75vw;
-  color: transparent;
-  background: url(/public/img/space_bg.jpg) repeat;
-  background-size: 100%;
-  background-position: center;
-  -webkit-background-clip: text;
-  position:relative;
-}
-
-.title strong {
-  color : black;
-}
-
-/* QuestionMark */
-.secBg {
-  border: 1px solid red;
-  display: flex;
-  height: 100%;
-}
-
-.secBg > * {
-  flex: 1;
-  border: 1px solid blue;
-}
-
-.explainTxt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 3vw;
-  line-height: 1.6;
-  font-family: "rokafSans-bold";
-  color : var(--gray);
-}
-
-.explainTxt strong {
-  color: black;
-  word-spacing: 1px;
 }
