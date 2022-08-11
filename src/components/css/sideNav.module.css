@@ -96,14 +96,16 @@
   text-transform: uppercase;
 }
 
-.linkBtn button {
+.linkBtn p {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border-style: none;
   background-color: transparent;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .linkBtn img {

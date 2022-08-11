@@ -1,0 +1,187 @@
+.secBg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.secBg::before{
+  content: "PORTFOLIO";
+  position: absolute;
+  font-family: "scdream-bold";
+  color : var(--orange-color);
+  font-size: 10vw;
+  letter-spacing: 5px;
+  opacity: 0.1;
+  top : 1rem;
+  left: 1rem;
+  z-index: -1;
+}
+
+/* portfolioCard */
+
+.portfolioCardCon {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  margin: auto;
+  max-width: 1520px;
+}
+
+
+.portfolioCard {
+  flex: 1;
+  border-radius: 3rem;
+  position: relative;
+  background-size: cover;
+  background-position: 40% 30%;
+  overflow: hidden;
+  box-shadow: var(--box-shadowing);
+}
+
+.portfolioCard:not(:last-of-type) {
+  margin-right: 1rem;
+}
+
+.portfolioCard.active{
+  flex-grow: 10;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.portfolioCard.active .info {
+  display: flex;
+}
+
+.label {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+
+.icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.icon img {
+  width: 30px;
+}
+
+.info {
+  display: none;
+  width: calc(100% - 100px);
+  transition: .3s;
+  padding-left: 1rem;
+  justify-content: space-between;
+}
+
+.info strong {
+  font-family: "pretendard-semibold";
+  font-size: 1.25rem;
+}
+
+.info .hashtags span:not(:last-of-type){
+  padding-right: 1rem;
+}
+
+.hoverArea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.lineButton {
+  background-color: transparent;
+  border-style: none;
+  color: white;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+.lineButtonIcon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lineButtonIcon img{
+  height: 30px;
+}
+
+.lineButton span:last-of-type {
+  text-transform: uppercase;
+  padding-top: 1rem;
+  font-family: "pretendard-medium";
+}
+
+.portfolioCard.active .hoverArea{
+  width: 0%
+} 
+
+.portfolioCard.active:hover .hoverArea{
+  width: 100%;
+} 
+
+.portfolioCard.active .lineButton {
+  display: flex;
+}
+
+/* portfolioCard Background img */
+
+.portfolioCard:nth-of-type(1) {
+  background-image: url(/public/img/project_1_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(2) {
+  background-image: url(/public/img/project_2_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(3) {
+  background-image: url(/public/img/project_3_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(4) {
+  background-image: url(/public/img/project_4_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(1) {
+  background-image: url(/public/img/project_1_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(5) {
+  background-image: url(/public/img/project_5_mockup.jpg);
+}
+
+.portfolioCard:nth-of-type(6) {
+  background-image: url(/public/img/project_6_mockup.jpg);
+}
+

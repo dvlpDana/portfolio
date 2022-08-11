@@ -1,0 +1,75 @@
+.emailForm {
+  padding: 1rem 2rem;
+  background-color: var(--yellow-shadow);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadowing);
+}
+
+.emailForm h3 {
+  font-family: "rokafSans-bold";
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--yellow-color);
+  padding: 1rem 0;
+}
+
+.emailForm div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.emailForm div label {
+  width: 20%;
+  text-align: center;
+}
+
+.emailForm div input,
+.emailForm div textarea {
+  width: 80%;
+}
+
+.emailForm div input,
+.emailForm div textarea {
+  border-style: none;
+  padding-left: 1rem;
+  border-radius: 0.75rem;
+}
+
+.emailForm div input {
+  height: 2.75rem;
+}
+
+.emailForm div textarea {
+  height: 5.5rem;
+  padding-top: 1rem;
+}
+
+.emailForm div textarea:focus,
+.emailForm div input:focus {
+  outline: none;
+}
+
+.emailForm div input::placeholder,
+.emailForm div textarea::placeholder {
+  font-family: "pretendard-extralight";
+  font-size: 1rem;
+}
+
+.emailForm .submitBtn {
+  justify-content: center;
+}
+
+.emailForm .submitBtn input {
+  width: 30%;
+  background-color: var(--yellow-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "pretendard-semibold";
+  font-size: 1.25rem;
+  cursor: pointer;
+}

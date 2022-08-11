@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import styles from './sideNav.module.css';
+import styles from './css/sideNav.module.css';
 import { Link } from "react-router-dom";
 
 function SideNav(props) {
@@ -15,17 +15,17 @@ function SideNav(props) {
           <li>portfolio</li>
           <li>contact</li>
         </ul>
-        <div className={`${styles.linkBtnCon}`} onClick={() => window.open('https://github.com/dvlpDana', '_blank')}>
-          <div className={`${styles.linkBtn}`}>
-            <button><img src={`${process.env.PUBLIC_URL}/img/icons/github.png`} alt="github_link" /></button>
+        <div className={`${styles.linkBtnCon}`} >
+          <div className={`${styles.linkBtn}`} onClick={() => window.open("https://github.com/dvlpDana", "_blank")}>
+            <p><img src={`${process.env.PUBLIC_URL}/img/icons/github.png`} alt="github_link" /></p>
             <span>github</span>
           </div>
-          <div className={`${styles.linkBtn}`} onClick={() => window.open('https://puzzle-cod-4e9.notion.site/_-a44e0b50b12548f4a4a24dfeeae0bc59', '_blank')}>
-            <button><img src={`${process.env.PUBLIC_URL}/img/icons/notion.png`} alt="notion_link" /></button>
+          <div className={`${styles.linkBtn}`} onClick={() => window.open("https://puzzle-cod-4e9.notion.site/_-a44e0b50b12548f4a4a24dfeeae0bc59", "_blank")}>
+            <p><img src={`${process.env.PUBLIC_URL}/img/icons/notion.png`} alt="notion_link" /></p>
             <span>notion</span>
           </div>
-          <div className={`${styles.linkBtn}`} onClick={() => window.open('https://dana-contact.slack.com/', '_blank')}>
-            <button><img src={`${process.env.PUBLIC_URL}/img/icons/slack.png`} alt="slack_link" /></button>
+          <div className={`${styles.linkBtn}`} onClick={() => window.open("https://dana-contact.slack.com/", "_blank")}>
+            <p><img src={`${process.env.PUBLIC_URL}/img/icons/slack.png`} alt="slack_link" /></p>
             <span>slack</span>
           </div>
         </div>

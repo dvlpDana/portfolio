@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 import "./App.css";
 
 // library
-import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 
@@ -17,9 +16,11 @@ import { Mobile, Pc } from "./components/mediaQuery.jsx";
 
 // slidepage
 import Introduce from "./pages/introduce.jsx";
-import NavSlide from "./pages/navSlide";
-import ProfileSlide from "./pages/profileSlide";
-import SkillSlide from "./pages/skillSlide";
+import NavSlide from "./pages/navSlide.jsx";
+import ProfileSlide from "./pages/profileSlide.jsx";
+import SkillSlide from "./pages/skillSlide.jsx";
+import PortfolioSlide from "./pages/portfolioSlide.jsx";
+import ContactSlide from "./pages/contactSlide.jsx";
 
 // subpage
 import FirstProject from "./pages/subpage/firstProject.jsx";
@@ -31,6 +32,7 @@ import SixthProject from "./pages/subpage/sixthProject.jsx";
 
 
 function App() {
+
   return (
     <>
       <Routes>
@@ -60,7 +62,11 @@ function MainIndex() {
           modules={[Mousewheel, Pagination]}
           className="mySwiper"
           >
-            
+
+          <SwiperSlide>
+            <ContactSlide />
+          </SwiperSlide>
+
           <SwiperSlide>
             <Introduce />
           </SwiperSlide>
@@ -78,18 +84,15 @@ function MainIndex() {
           </SwiperSlide>
 
           <SwiperSlide>
-            Slide 5<Link to="first-project">첫번째 프로젝트 이동 링크</Link>
-            <Link to="second-project">두번째 프로젝트 이동 링크</Link>
-            <Link to="third-project">세번째 프로젝트 이동 링크</Link>
-            <Link to="fourth-project">네번째 프로젝트 이동 링크</Link>
-            <Link to="fifth-project">다섯번째 프로젝트 이동 링크</Link>
-            <Link to="sixth-project">여섯번째 프로젝트 이동 링크</Link>
+            <PortfolioSlide />
           </SwiperSlide>
 
-          <SwiperSlide>Slide 6</SwiperSlide>
         </Swiper>
       </Pc>
-      <Mobile></Mobile>
+
+      <Mobile>
+
+      </Mobile>
     </>
   );
 }
