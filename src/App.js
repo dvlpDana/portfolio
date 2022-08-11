@@ -30,9 +30,7 @@ import FourthProject from "./pages/subpage/fourthProject.jsx";
 import FifthProject from "./pages/subpage/fifthProject.jsx";
 import SixthProject from "./pages/subpage/sixthProject.jsx";
 
-
 function App() {
-
   return (
     <>
       <Routes>
@@ -61,11 +59,7 @@ function MainIndex() {
           mousewheel={true}
           modules={[Mousewheel, Pagination]}
           className="mySwiper"
-          >
-
-          <SwiperSlide>
-            <ContactSlide />
-          </SwiperSlide>
+        >
 
           <SwiperSlide>
             <Introduce />
@@ -76,22 +70,59 @@ function MainIndex() {
           </SwiperSlide>
 
           <SwiperSlide>
-            <ProfileSlide/>
+            <ProfileSlide />
           </SwiperSlide>
 
           <SwiperSlide>
-            <SkillSlide/>
+            <SkillSlide />
           </SwiperSlide>
 
           <SwiperSlide>
             <PortfolioSlide />
           </SwiperSlide>
 
+          <SwiperSlide>
+            <ContactSlide />
+          </SwiperSlide>
         </Swiper>
       </Pc>
 
       <Mobile>
+        <Swiper
+          direction={"vertical"}
+          spaceBetween={30}
+          pagination={{
+            clickable: true
+          }}
+          mousewheel={true}
+          modules={[Mousewheel, Pagination]}
+          className="mySwiper"
+        >
 
+          <SwiperSlide>
+            <Introduce />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <NavSlide />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ProfileSlide />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <SkillSlide />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <PortfolioSlide />
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <ContactSlide />
+          </SwiperSlide>
+        </Swiper>
       </Mobile>
     </>
   );

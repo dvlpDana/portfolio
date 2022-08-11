@@ -66,8 +66,16 @@
   top: 0;
 }
 
+.profileCharacter li{
+  position: relative;
+  padding-left: 1rem;
+}
+
 .profileCharacter li::before {
   content: "・";
+  position: absolute;
+  top : 0;
+  left: -0.5rem;
 }
 
 .profileTxtCon h3 {
@@ -156,4 +164,50 @@
   border: 2px solid var(--violot-dark-color);
   background-color: white;
   color: var(--violot-dark-color);
+}
+
+@media (max-width : 1280px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width : 1000px) {
+  .secBg {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profileTxtCon,
+  .profileImgCon {
+    width: 90%;
+    padding: 0;
+  }
+
+  .profileImg {
+    display: none;
+  }
+
+  .profileBtnCon {
+    justify-content: center;
+  }
+
+  .profileBtn.purple {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width : 780px) {
+  .profileTitle strong{
+    font-size: 3rem;
+  }
+  
+  .profileTitle span {
+    font-size: 1.75rem;
+  }
+
+  :root {
+    font-size: 12px;
+  }
 }

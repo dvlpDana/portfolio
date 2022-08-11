@@ -11,7 +11,7 @@
   text-align: center;
   font-size: 1.5rem;
   color: var(--yellow-color);
-  padding: 1rem 0;
+  padding-bottom: 1rem;
 }
 
 .emailForm div {
@@ -21,18 +21,15 @@
   margin: 1rem 0;
 }
 
-.emailForm div label {
+.emailForm div:not(:nth-of-type(5)) label {
   width: 20%;
-  text-align: center;
+  text-align: left;
+  padding-left: 1rem;
 }
 
-.emailForm div input,
+.emailForm div:not(:nth-of-type(5), :last-of-type) input,
 .emailForm div textarea {
   width: 80%;
-}
-
-.emailForm div input,
-.emailForm div textarea {
   border-style: none;
   padding-left: 1rem;
   border-radius: 0.75rem;
@@ -58,13 +55,27 @@
   font-size: 1rem;
 }
 
-.emailForm .submitBtn {
+.emailForm .agree {
+  font-size: smaller;
+  padding: 0 2rem;
   justify-content: center;
 }
 
-.emailForm .submitBtn input {
+.emailForm .agree input {
+  border-style: none;
+}
+
+.emailForm .agree label {
+  margin-left: 1rem;
+}
+
+.emailForm .submit {
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.submitBtn{
   width: 30%;
-  background-color: var(--yellow-color);
   font-size: 1rem;
   text-transform: uppercase;
   color: white;
@@ -72,4 +83,21 @@
   font-family: "pretendard-semibold";
   font-size: 1.25rem;
   cursor: pointer;
+  position: relative;
+  transition: .3s;
+  border-radius: 1rem;
+  border-style: none;
+}
+
+.submitBtnAction {background-color: var(--yellow-color);}
+
+.submitBtnInaction {
+  background-color: var(--lightest-gray);
+  cursor: none; 
+}
+
+.submitBtnAction:hover {
+  background-color: white;
+  border: 2px solid var(--yellow-color);
+  color: var(--yellow-color);
 }

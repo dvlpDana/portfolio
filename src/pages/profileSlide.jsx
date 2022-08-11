@@ -1,26 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import styles from './css/profileSlide.module.css';
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import ToggleButton from "../components/toggleButton";
 import SideNav from "../components/sideNav";
 
 function ProfileSlide() {
 
-  useEffect(() => {
-    AOS.init({
-      duration : 1000,
-      easing : 'ease-in-out',
-  });
-    AOS.refresh();
-  }, [])
-
   const [sideNav, setSideNav] = useState(false);
 
   return(
     <section className={`${styles.secBg}`}>
-      <div className={`${styles.profileTxtCon}`} data-aos="fade-right">
+      <div className={`${styles.profileTxtCon}`}>
         <h2 className={`${styles.profileTitle}`}>
           <strong>심단비</strong>
           <span>"사용자를 위한 기능이 무엇인지 깊이 생각하고 설계하는 DEVELOPER"</span>
@@ -38,7 +28,7 @@ function ProfileSlide() {
           <span><strong>2022.05.18</strong> 정보처리기사 합격(필기)</span>
         </p>
       </div>
-      <div className={`${styles.profileImgCon}`} data-aos="fade-left">
+      <div className={`${styles.profileImgCon}`}>
         <div className={`${styles.profileImg}`}>
           <img src={`${process.env.PUBLIC_URL}/img/blog_screenShot.jpg`} alt="blog_screenShot"/>
           <img src={`${process.env.PUBLIC_URL}/img/notion_screenShot.jpg`} alt="notion_screenShot"/>

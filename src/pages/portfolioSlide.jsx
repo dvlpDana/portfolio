@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "./css/portfolioSlide.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import { Link, useNavigate } from "react-router-dom";
 
 import ToggleButton from "../components/toggleButton";
 import SideNav from "../components/sideNav";
 
 function PortfolioSlide() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out"
-    });
-    AOS.refresh();
-  }, []);
 
   const [sideNav, setSideNav] = useState(false);
   const navigate = useNavigate();
@@ -276,7 +268,7 @@ function PortfolioSlide() {
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
-                src={`${process.env.PUBLIC_URL}/img/project_1_favicon.png`}
+                src={`${process.env.PUBLIC_URL}/img/project_6_favicon.jpg`}
                 alt="favicon"
               />
             </div>

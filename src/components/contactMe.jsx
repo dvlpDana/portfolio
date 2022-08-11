@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 import styles from "./css/contactMe.module.css";
 
@@ -9,15 +10,66 @@ export const ContactMe = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_qdo2opg', 'template_cqw78qq', form.current, 'esQPuyyAvqcchgZ7X')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_qdo2opg",
+        "template_cqw78qq",
+        form.current,
+        "esQPuyyAvqcchgZ7X"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
   };
 
-    // className={`${styles.}`}
+  const [mailContent, setMailContent] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
+  const { name, email, phone, message } = mailContent;
+
+  const onChangeInput = (e) => {
+    const { name, value } = e.target;
+    setMailContent({ ...mailContent, [name]: value });
+  };
+
+  const [checkBoxActive, setCheckboxActive] = useState(false);
+
+  const isCheckBoxClicked = () => {
+    setCheckboxActive(!checkBoxActive);
+  };
+
+  const isValidEmail = email.includes("@") && email.includes(".");
+
+  const isValidInput =
+    name.length >= 1 && email.length >= 1 && phone.length >= 1;
+
+  const getIsActive =
+    isValidEmail && isValidInput && checkBoxActive === true;
+
+  const handleButtonValid = () => {
+    if (!isValidEmail || !isValidInput || !isCheckBoxClicked()) {
+      alert("빈 칸을 기입한 뒤, 전송해주세요.");
+    } else {
+      setMailContent({
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
+      });
+    };
+  
+  };
+
+  // className={`${styles.}`}
 
   return (
     <div className={`${styles.emailForm}`}>
@@ -25,22 +77,54 @@ export const ContactMe = () => {
       <form ref={form} onSubmit={sendEmail}>
         <div className={`${styles.name}`}>
           <label>이름</label>
-          <input type="text" name="name" placeholder="이름을 입력해주세요" />
+          <input
+            type="text"
+            name="name"
+            placeholder="이름을 입력해주세요"
+            value={name}
+            onChange={onChangeInput}
+          />
         </div>
         <div className={`${styles.email}`}>
           <label>Email</label>
-          <input type="email" name="email" placeholder="메일 주소를 입력해주세요" />
+          <input
+            type="email"
+            name="email"
+            placeholder="메일 주소를 입력해주세요"
+            value={email}
+            onChange={onChangeInput}
+          />
         </div>
         <div className={`${styles.phone}`}>
           <label>연락처</label>
-          <input type="number" name="phone" placeholder="연락처를 입력해주세요" />
+          <input
+            type="text"
+            name="phone"
+            placeholder="연락처를 입력해주세요"
+            value={phone}
+            onChange={onChangeInput}
+          />
         </div>
         <div className={`${styles.message}`}>
           <label>보낼 내용</label>
-          <textarea name="message" placeholder="내용을 입력해주세요"/>
+          <textarea
+            name="message"
+            placeholder="내용을 입력해주세요"
+            value={message}
+            onChange={onChangeInput}
+          />
         </div>
-        <div className={`${styles.submitBtn}`}>
-          <input type="submit" value="Send" />
+        <div className={`${styles.agree}`}>
+          <input type="checkbox" onClick={isCheckBoxClicked} />
+          <label>제공한 정보는 연락의 목적으로만 사용되며, 목적 이외의 용도로는 사용되지 않습니다. 메일 전송에 동의합니다.</label>
+        </div>
+        <div className={`${styles.submit}`}>
+          <input
+            type="submit"
+            value="Send"
+            onClick={handleButtonValid}
+            className={ getIsActive ? `${styles.submitBtnAction} ${styles.submitBtn}` : `${styles.submitBtnInaction} ${styles.submitBtn}`}
+          />
         </div>
       </form>
     </div>

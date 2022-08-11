@@ -16,7 +16,7 @@
   font-size: 3.5vw;
   line-height: 1.6;
   font-family: "rokafSans-bold";
-  color : var(--gray);
+  color: var(--gray);
   animation: txtFadeOutAni 3s ease-in 5s forwards;
 }
 
@@ -41,9 +41,9 @@
   position: relative;
 }
 
-.puzzleSlice{
+.puzzleSlice {
   position: absolute;
-  top : 50%;
+  top: 50%;
   left: 50%;
   width: 18%;
 }
@@ -110,7 +110,7 @@
   100% {
     opacity: 0;
     left: 0;
-    top: 10%;
+    top: 100%;
   }
 }
 
@@ -122,7 +122,7 @@
 
   100% {
     opacity: 0;
-    top : -10%;
+    top : 60%;
     left: 100%;
   }
 }
@@ -134,22 +134,23 @@
 
   100% {
     opacity: 0;
-    top : -100%;
+    top : 0;
     left: -60%;
   }
 }
 
 .puzzleNav {
   position: absolute;
-  top : 50%;
+  top: 50%;
   left: 50%;
-  width: 100%;
+  width: 90%;
   height: 100%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   opacity: 0;
+  max-width: 1520px;
 }
 
 .puzzleNav div {
@@ -157,19 +158,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .puzzleNav img {
   width: 60%;
 }
 
-.puzzleNav div {
-  cursor: pointer;
-  transition: .3s;
-}
-
 .puzzleNav div:hover {
-  margin-bottom: 2rem;
+  transform: translateY(-15%);
 }
 
 .puzzleNav div:nth-of-type(1) img {
@@ -200,5 +198,73 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1280px) {
+  .explainTxt {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 780px) {
+  .secBg {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .secBg > * {
+    flex: none;
+  }
+
+  .explainTxt {
+    height: 40%;
+    font-size: 6vw;
+  }
+
+  .questionMark {
+    height: 40%;
+  }
+
+  .puzzleSlice {
+    width: 15%;
+  }
+
+  .questionMark .second {
+    width: 19%;
+  }
+
+  .questionMark .fourth {
+    width: 18%;
+  }
+
+  .questionMark .sixth {
+    width: 19%;
+  }
+
+  .questionMark .seventh {
+    width: 14%;
+  }
+
+  .questionMark .eighth {
+    width: 12%;
+  }
+
+  .puzzleNav {
+    flex-wrap: wrap;
+    height: 60%;
+  }
+
+  .puzzleNav div {
+    flex: none;
+    width: 50%;
+  }
+
+  .puzzleNav img {
+    width: 80% !important;
+  }
+  
+  .puzzleNav div:nth-of-type(4) img {
+    width: 120% !important;
   }
 }

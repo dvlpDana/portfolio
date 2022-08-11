@@ -2,7 +2,9 @@
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .secBg::before {
@@ -18,13 +20,19 @@
   z-index: -1;
 }
 
+.contactSlideCon {
+  padding: 0 8%;
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+
 .contactTitle {
   font-family: "rokafSans-bold";
   text-align: center;
   font-size: 2.75rem;
   color: var(--gray);
   line-height: 1.5;
-  padding-top: 10rem;
   padding-bottom: 3rem;
 }
 
@@ -34,10 +42,15 @@
 
 .contactCon {
   display: flex;
+  justify-content: space-between;
 }
 
-.contactCon > * {
-  flex: 1;
+.contactTxt,
+.contactMe {
+  width: calc(50% - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contactTxt p {
@@ -78,13 +91,41 @@
   box-shadow: 0 0 6px var(--yellow-bg);
   padding: 1rem;
   border-radius: 1rem;
-  transition: .3s;
+  transition: 0.3s;
+  color: var(--font-color);
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.contactLinkBtn::before,
+.contactLinkBtn::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--yellow-color);
+  transition: 0.5s;
+}
+
+.contactLinkBtn::before {
+  top: 0;
+  left: 0;
+}
+
+.contactLinkBtn::after {
+  bottom: 0;
+  right: 0;
 }
 
 .contactLinkBtn:hover {
-  background: linear-gradient(145deg, #e6dbc5, #ffffea);
-  box-shadow:  6px 6px 12px #c9c0ad,
-               -6px -6px 12px #ffffff;
+  box-shadow: none;
+  color: #d59e39;
+  font-weight: bold;
+}
+
+.contactLinkBtn:hover::before,
+.contactLinkBtn:hover::after {
+  width: 100%;
 }
 
 .contactLinkBtn:nth-of-type(1) {
@@ -97,4 +138,22 @@
 
 .contactLinkBtn img {
   height: 30px;
+}
+
+@media (max-width: 780px) {
+
+  :root {
+    font-size: 12px;
+  }
+
+  .contactTitle {
+    word-break: keep-all;
+  }
+  .contactTxt {
+    width: 90%;
+    margin: auto;
+  }
+  .contactMe {
+    display: none;
+  }
 }

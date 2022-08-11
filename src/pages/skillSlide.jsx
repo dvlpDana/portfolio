@@ -1,28 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styles from "./css/skillSlide.module.css";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 import ToggleButton from "../components/toggleButton";
 import SideNav from "../components/sideNav";
 
 function SkillSlide() {
-  // className={`${styles.}`}
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out"
-    });
-    AOS.refresh();
-  }, []);
 
   const [sideNav, setSideNav] = useState(false);
 
   return (
     <section className={`${styles.secBg}`}>
       <ol className={`${styles.skillListCon}`}>
-        <li className={`${styles.skillList}`} data-aos="fade-right">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/html.png`}
@@ -34,7 +23,7 @@ function SkillSlide() {
             작성합니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-right">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/JS.png`}
@@ -45,7 +34,7 @@ function SkillSlide() {
             Vanila JS를 사용하여 불필요한 코드를 배제하고 필요한 기능을 구현합니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-right">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/css.png`}
@@ -56,7 +45,7 @@ function SkillSlide() {
             다양한 스타일을 적용하고 미디어쿼리를 사용하여 반응형 웹을 제작합니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-right">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/react.png`}
@@ -67,7 +56,7 @@ function SkillSlide() {
             React Library를 활용하여 컴포넌트 기반의 웹사이트를 효율적으로 개발합니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-left">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/Jquery.png`}
@@ -78,7 +67,7 @@ function SkillSlide() {
             기본 명령어를 이해하고 시간 대비 효율적으로 Interactive Effect를 구현합니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-left">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/illustrator.png`}
@@ -89,7 +78,7 @@ function SkillSlide() {
             간단한 로고 및 아이콘을 제작할 수 있습니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-left">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/photoshop.png`}
@@ -100,7 +89,7 @@ function SkillSlide() {
             웹 개발에 적절하게 이미지를 편집하고 수정할 수 있습니다
           </p>
         </li>
-        <li className={`${styles.skillList}`} data-aos="fade-left">
+        <li className={`${styles.skillList}`}>
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/git.png`}
