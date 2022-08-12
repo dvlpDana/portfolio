@@ -29,6 +29,21 @@
   justify-content: center;
 }
 
+.profileTxtCon.active {
+  animation: fadeLeft 1s ease-in forwards;
+} 
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .profileTitle > * {
   display: block;
 }
@@ -109,6 +124,21 @@
   justify-content: center;
 }
 
+.profileImgCon.active {
+  animation: fadeRight 1s ease-in forwards;
+} 
+
+@keyframes fadeRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .profileImg {
   background-color: var(--violet-bg);
   width: 100%;
@@ -124,6 +154,11 @@
   transform: translate(-50%, -50%);
   width: 90%;
   border-radius: 1rem;
+  visibility: hidden;
+}
+
+.profileImg img.visible {
+  visibility: visible;
 }
 
 .profileBtnCon {

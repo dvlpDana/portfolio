@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './css/navSlide.module.css';
+import {useSwiper} from 'swiper/react';
 
 function NavSlide() {
+
+  const swiper = useSwiper();
+
   return (
     <section className={`${styles.secBg}`}>
       <h2 className={`${styles.explainTxt}`}>
@@ -54,10 +58,10 @@ function NavSlide() {
         />
       </div>
       <div className={`${styles.puzzleNav}`}>
-        <div><img src={`${process.env.PUBLIC_URL}/img/svg/menu_01.svg`} alt="menu"/></div>
-        <div><img src={`${process.env.PUBLIC_URL}/img/svg/menu_02.svg`} alt="menu"/></div>
-        <div><img src={`${process.env.PUBLIC_URL}/img/svg/menu_03.svg`} alt="menu"/></div>
-        <div><img src={`${process.env.PUBLIC_URL}/img/svg/menu_04.svg`} alt="menu"/></div>
+        <div onClick={() => swiper.slideTo(1)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_01.svg`} alt="menu"/></div>
+        <div onClick={() => swiper.slideTo(2)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_02.svg`} alt="menu"/></div>
+        <div onClick={() => swiper.slideTo(3)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_03.svg`} alt="menu"/></div>
+        <div onClick={() => swiper.slideTo(4)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_04.svg`} alt="menu"/></div>
       </div>
     </section>
   );

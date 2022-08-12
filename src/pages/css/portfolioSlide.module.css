@@ -26,6 +26,20 @@
   display: flex;
   margin: auto;
   max-width: 1520px;
+  opacity: 0;
+}
+
+.portfolioCardCon.fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .portfolioCard {
@@ -172,6 +186,7 @@
   .portfolioCard {
     flex: 1;
     min-width: 70px;
+    transition: .5s;
   }
 
   .portfolioCard:not(:last-of-type) {
@@ -181,7 +196,6 @@
   .portfolioCard.active{
     flex-grow: 10;
     width: 100%;
-    border-radius: 2rem;
   }
 
   .info,

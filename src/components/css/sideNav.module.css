@@ -48,6 +48,11 @@
 
 .sideNav li {
   cursor: pointer;
+  transition: .3s;
+}
+
+.sideNav li:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .sideNav li:nth-of-type(1) {
@@ -127,11 +132,16 @@
 
 .backBtn {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  top: 1rem;
-  right: 1rem;
+  width: 50px;
+  height: 50px;
+  top: 1.25rem;
+  right: 1.25rem;
   cursor: pointer;
+  transition: .3s;
+}
+
+.backBtn:hover {
+  transform: rotate(90deg);
 }
 
 .backBtn span {
@@ -150,4 +160,28 @@
 
 .backBtn span:last-of-type {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width : 780px) {
+  .sideNavCon::before {
+    display: none;
+  }
+
+  .sideNavCon {
+    width: 70%;
+    max-width: 300px;
+  }
+
+  .linkBtn p {
+    width: 60px;
+    height: 60px;
+  }
+
+  .linkBtn img {
+    width: 30px;
+  }
+
+  .linkBtn:last-of-type img {
+    width: 25px;
+  }
 }

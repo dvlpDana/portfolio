@@ -26,34 +26,34 @@
 }
 
 :root {
-  --gray : #505050;
-  --light-gray : #6B6B6B;
-  --lightest-gray : #eaeaea;
-  --font-color : #333333;
-  --pink-color : #ff6f91;
-  --pink-bg : #FFD0DB;
-  --pink-shadow : rgba(255, 111, 145, 0.16);
-  --violet-color : #845ec2;
-  --violot-dark-color : #482482;
-  --violet-bg : #E0D7EF;
-  --violet-shadow : rgba(132, 94, 194, 0.16);
-  --purple-color : #d65db1;
-  --purple-bg : #F5D6EC;
-  --purple-shadow : rgba(214, 93, 177, 0.16);
-  --orange-color : #ff9671;
-  --orange-bg : #FFDBCE;
-  --orange-shadow : rgba(255, 150, 113, 0.16);
-  --yellow-color : #ffc75f;
-  --yellow-light-color : #fbf8f1;
-  --yellow-bg : #FEE1AD;
-  --yellow-shadow : rgba(254, 225, 173, 0.26);
-  --box-shadowing : 2px 2px 6px rgba(0, 0, 0, 0.2);
+  --gray: #505050;
+  --light-gray: #6b6b6b;
+  --lightest-gray: #eaeaea;
+  --font-color: #333333;
+  --pink-color: #ff6f91;
+  --pink-bg: #ffd0db;
+  --pink-shadow: rgba(255, 111, 145, 0.16);
+  --violet-color: #845ec2;
+  --violot-dark-color: #482482;
+  --violet-bg: #e0d7ef;
+  --violet-shadow: rgba(132, 94, 194, 0.16);
+  --purple-color: #d65db1;
+  --purple-bg: #f5d6ec;
+  --purple-shadow: rgba(214, 93, 177, 0.16);
+  --orange-color: #ff9671;
+  --orange-bg: #ffdbce;
+  --orange-shadow: rgba(255, 150, 113, 0.16);
+  --yellow-color: #ffc75f;
+  --yellow-light-color: #fbf8f1;
+  --yellow-bg: #fee1ad;
+  --yellow-shadow: rgba(254, 225, 173, 0.26);
+  --box-shadowing: 2px 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* App */
 
 body {
-  color : var(--font-color);
+  color: var(--font-color);
   font-family: "pretendard-extralight";
   background: #f7f7f7;
 }
@@ -61,4 +61,43 @@ body {
 .swiper {
   width: 100%;
   height: 100vh;
+}
+
+@media (min-width : 781px) {
+  .swiper-pagination {
+    padding: 1.25rem 0;
+    bottom: 2rem !important;
+  }
+  
+  .swiper-pagination::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f3f0f1;
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+      6px 6px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3rem;
+    z-index: -1;
+  }
+  
+  .swiper-pagination-bullet {
+    margin: 0 1rem !important;
+    background-color: var(--light-gray);
+  }
+}
+
+@media (max-width : 780px) {
+  .swiper-pagination {
+    right: 2rem !important;
+  }
+  .swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 5rem;
+    border-radius: 4px;
+    background-color: var(--light-gray);
+  }
 }

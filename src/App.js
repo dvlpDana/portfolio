@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 // css
@@ -13,6 +13,8 @@ import { Mousewheel, Pagination } from "swiper";
 
 // components
 import { Mobile, Pc } from "./components/mediaQuery.jsx";
+import ToggleButton from "./components/toggleButton";
+import SideNav from "./components/sideNav";
 
 // slidepage
 import Introduce from "./pages/introduce.jsx";
@@ -34,7 +36,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="*" element={<MainIndex />} />
+        <Route index element={<Introduce />} />
+        <Route path="index" element={<Index />} />
         <Route path="first-project" element={<FirstProject />} />
         <Route path="second-project" element={<SecondProject />} />
         <Route path="third-project" element={<ThirdProject />} />
@@ -46,7 +49,9 @@ function App() {
   );
 }
 
-function MainIndex() {
+function Index() {
+  const [sideNav, setSideNav] = useState(false);
+
   return (
     <>
       <Pc>
@@ -60,11 +65,6 @@ function MainIndex() {
           modules={[Mousewheel, Pagination]}
           className="mySwiper"
         >
-
-          <SwiperSlide>
-            <Introduce />
-          </SwiperSlide>
-
           <SwiperSlide>
             <NavSlide />
           </SwiperSlide>
@@ -84,6 +84,18 @@ function MainIndex() {
           <SwiperSlide>
             <ContactSlide />
           </SwiperSlide>
+
+          <div slot="container-end"
+            onClick={() => {
+              setSideNav(!sideNav);
+            }}
+          >
+            <ToggleButton shadow="rgba(0, 0, 0, 0.2)" background="#9B9B9B" />
+          </div>
+
+          {sideNav === true ? (
+            <SideNav sideNav={sideNav} setSideNav={setSideNav} />
+          ) : null}
         </Swiper>
       </Pc>
 
@@ -98,15 +110,6 @@ function MainIndex() {
           modules={[Mousewheel, Pagination]}
           className="mySwiper"
         >
-
-          <SwiperSlide>
-            <Introduce />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <NavSlide />
-          </SwiperSlide>
-
           <SwiperSlide>
             <ProfileSlide />
           </SwiperSlide>
@@ -122,6 +125,19 @@ function MainIndex() {
           <SwiperSlide>
             <ContactSlide />
           </SwiperSlide>
+
+          <div slot="container-end"
+            onClick={() => {
+              setSideNav(!sideNav);
+            }}
+          >
+            <ToggleButton shadow="rgba(0, 0, 0, 0.2)" background="#9B9B9B" />
+          </div>
+
+          {sideNav === true ? (
+            <SideNav sideNav={sideNav} setSideNav={setSideNav} />
+          ) : null}
+
         </Swiper>
       </Mobile>
     </>

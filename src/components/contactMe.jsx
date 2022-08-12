@@ -47,6 +47,7 @@ export const ContactMe = () => {
     setCheckboxActive(!checkBoxActive);
   };
 
+
   const isValidEmail = email.includes("@") && email.includes(".");
 
   const isValidInput =
@@ -55,8 +56,12 @@ export const ContactMe = () => {
   const getIsActive =
     isValidEmail && isValidInput && checkBoxActive === true;
 
-  const handleButtonValid = () => {
-    if (!isValidEmail || !isValidInput || !isCheckBoxClicked()) {
+  console.log(isValidEmail);
+  console.log(isValidInput);
+  console.log(checkBoxActive)
+
+    const handleButtonValid = () => {
+    if (!isValidEmail || !isValidInput || checkBoxActive === false) {
       alert("빈 칸을 기입한 뒤, 전송해주세요.");
     } else {
       setMailContent({
@@ -69,8 +74,6 @@ export const ContactMe = () => {
   
   };
 
-  // className={`${styles.}`}
-
   return (
     <div className={`${styles.emailForm}`}>
       <h3>send to e-mail</h3>
@@ -81,6 +84,7 @@ export const ContactMe = () => {
             type="text"
             name="name"
             placeholder="이름을 입력해주세요"
+            autoComplete="off"
             value={name}
             onChange={onChangeInput}
           />
@@ -91,6 +95,7 @@ export const ContactMe = () => {
             type="email"
             name="email"
             placeholder="메일 주소를 입력해주세요"
+            autoComplete="off"
             value={email}
             onChange={onChangeInput}
           />
@@ -101,6 +106,7 @@ export const ContactMe = () => {
             type="text"
             name="phone"
             placeholder="연락처를 입력해주세요"
+            autoComplete="off"
             value={phone}
             onChange={onChangeInput}
           />

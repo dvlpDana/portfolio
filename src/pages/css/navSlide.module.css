@@ -1,6 +1,6 @@
 .secBg {
   display: flex;
-  height: 100%;
+  height: 100vh;
   position: relative;
 }
 
@@ -17,7 +17,7 @@
   line-height: 1.6;
   font-family: "rokafSans-bold";
   color: var(--gray);
-  animation: txtFadeOutAni 3s ease-in 5s forwards;
+  animation: txtFadeOutAni 1s ease-in 2s forwards;
 }
 
 .explainTxt strong {
@@ -88,18 +88,18 @@
 .puzzleSlice:nth-of-type(1),
 .puzzleSlice:nth-of-type(5),
 .puzzleSlice:nth-of-type(7) {
-  animation: questionRightAni 3s ease-in-out 6s forwards;
+  animation: questionRightAni 1s ease-in-out 2s forwards;
 }
 
 .puzzleSlice:nth-of-type(3),
 .puzzleSlice:nth-of-type(6),
 .puzzleSlice:nth-of-type(8) {
-  animation: questionLeftAni 2s ease-in-out 6.3s forwards;
+  animation: questionLeftAni 1.2s ease-in-out 1.8s forwards;
 }
 
 .puzzleSlice:nth-of-type(2),
 .puzzleSlice:nth-of-type(4) {
-  animation: questionBottomAni 2s ease-in-out 6.6s forwards;
+  animation: questionBottomAni 1.4s ease-in-out 1.6s forwards;
 }
 
 @keyframes questionRightAni {
@@ -149,7 +149,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  opacity: 0;
+  visibility: hidden;
   max-width: 1520px;
 }
 
@@ -189,15 +189,17 @@
 }
 
 .puzzleNav {
-  animation: puzzleNavAni 2s ease-in 8s forwards;
+  animation: puzzleNavAni 2s ease-in 3s forwards;
 }
 
 @keyframes puzzleNavAni {
   0% {
     opacity: 0;
+    visibility: hidden;
   }
   100% {
     opacity: 1;
+    visibility: visible;
   }
 }
 

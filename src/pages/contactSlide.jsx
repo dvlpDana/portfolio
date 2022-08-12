@@ -1,26 +1,23 @@
 import React, { useEffect, useState } from "react";
 import styles from "./css/contactSlide.module.css";
 
-import ToggleButton from "../components/toggleButton";
-import SideNav from "../components/sideNav";
 import { ContactMe } from "../components/contactMe";
+import { useSwiperSlide } from "swiper/react";
 
 function ContactSlide() {
 
-  const [sideNav, setSideNav] = useState(false);
-
-  // className={`${styles.}`}
+   const swiperSlide = useSwiperSlide();
 
   return (
     <section className={`${styles.secBg}`}>
       <div className={`${styles.contactSlideCon}`}>
-        <h2 className={`${styles.contactTitle}`}>
+        <h2 className={swiperSlide.isActive ? `${styles.contactTitle} ${styles.fadeIn}` : `${styles.contactTitle}`}>
           스스로 찾아 배우고 깊이 있게 생각해서 개발하는
           <br />
           <strong>퍼블리셔 / 개발자</strong>를 찾고 계신가요?
         </h2>
         <div className={`${styles.contactCon}`}>
-          <div className={`${styles.contactTxt}`}>
+          <div className={swiperSlide.isActive ? `${styles.contactTxt}  ${styles.fadeLeft}`: `${styles.contactTxt}`}>
             <p>
               개발자는 평생 공부를 하며 끊임없이 배워야 하는 직업이라고 생각합니다. <br />
               궁금한 것을 알기 위해 스스로 찾아 배우고 <br />
@@ -46,22 +43,12 @@ function ContactSlide() {
               </div>
             </div>
           </div>
-          <div className={`${styles.contactMe}`}>
+          <div className={swiperSlide.isActive ? `${styles.contactMe} ${styles.fadeRight}` : `${styles.contactMe}`}>
             <ContactMe />
           </div>
         </div>
       </div>
 
-      <div
-        onClick={() => {
-          setSideNav(!sideNav);
-        }}
-      >
-        <ToggleButton shadow="rgba(254, 225, 173, 0.5)" background="#ffc75f" />
-      </div>
-      {sideNav === true ? (
-        <SideNav sideNav={sideNav} setSideNav={setSideNav} />
-      ) : null}
     </section>
   );
 }

@@ -17,7 +17,6 @@
   z-index: -1;
 }
 
-
 .skillListCon {
   display: flex;
   height: 100%;
@@ -32,6 +31,55 @@
   width: 25%;
   display: flex;
   flex-direction: column;
+  opacity: 0;
+}
+
+.skillList:nth-of-type(1).active {
+  animation: fadeLeft 1s ease-in forwards;
+}
+.skillList:nth-of-type(2).active {
+  animation: fadeLeft 0.875s ease-in 0.125s forwards;
+}
+.skillList:nth-of-type(3).active {
+  animation: fadeLeft 0.75s ease-in 0.25s forwards;
+}
+.skillList:nth-of-type(4).active {
+  animation: fadeLeft 0.625s ease-in 0.375s forwards;
+}
+.skillList:nth-of-type(5).active {
+  animation: fadeLeft 0.5s ease-in 0.5s forwards;
+}
+.skillList:nth-of-type(6).active {
+  animation: fadeLeft 0.375s ease-in 0.625s forwards;
+}
+.skillList:nth-of-type(7).active {
+  animation: fadeLeft 0.25s ease-in 0.75s forwards;
+}
+.skillList:nth-of-type(8).active {
+  animation: fadeLeft 0.125s ease-in 0.875s forwards;
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.skillList:hover img {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.skillList:hover p {
+  font-weight: bold;
+}
+
+.skillList:hover div::before {
+  transform: scale(1);
 }
 
 .skillList div {
@@ -50,6 +98,19 @@
   content: "";
   position: absolute;
   width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top : 0;
+  left: 0;
+  background-color: var(--yellow-shadow);
+  transition: .3s;
+  transform: scale(0);
+}
+
+.skillList div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
   height: 1px;
   background-color: var(--lightest-gray);
   bottom: -1.5rem;
@@ -59,6 +120,7 @@
   width: 60%;
   line-height: 1.6;
   padding: 1rem 0;
+  transition: .3s;
 }
 
 .skillList div img {
@@ -68,6 +130,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: .3s;
 }
 
 .skillList:nth-of-type(4) img,

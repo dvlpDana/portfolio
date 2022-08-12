@@ -18,7 +18,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
 }
 
 .emailForm div:not(:nth-of-type(5)) label {
@@ -36,11 +36,11 @@
 }
 
 .emailForm div input {
-  height: 2.75rem;
+  height: 2.5rem;
 }
 
 .emailForm div textarea {
-  height: 5.5rem;
+  height: 4rem;
   padding-top: 1rem;
 }
 
@@ -52,7 +52,7 @@
 .emailForm div input::placeholder,
 .emailForm div textarea::placeholder {
   font-family: "pretendard-extralight";
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 .emailForm .agree {
@@ -67,6 +67,8 @@
 
 .emailForm .agree label {
   margin-left: 1rem;
+  line-height: 1.4;
+  color : var(--gray)
 }
 
 .emailForm .submit {

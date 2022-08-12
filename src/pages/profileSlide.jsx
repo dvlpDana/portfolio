@@ -1,16 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import styles from './css/profileSlide.module.css';
-
-import ToggleButton from "../components/toggleButton";
-import SideNav from "../components/sideNav";
+import {useSwiperSlide} from 'swiper/react';
+import { useState } from 'react';
 
 function ProfileSlide() {
 
-  const [sideNav, setSideNav] = useState(false);
+  const swiperSlide = useSwiperSlide();
+
+  const[visible, setVisible] = useState("blog");
 
   return(
     <section className={`${styles.secBg}`}>
-      <div className={`${styles.profileTxtCon}`}>
+      <div className={swiperSlide.isActive ? `${styles.profileTxtCon } ${styles.active}` : `${styles.profileTxtCon} `}>
         <h2 className={`${styles.profileTitle}`}>
           <strong>심단비</strong>
           <span>"사용자를 위한 기능이 무엇인지 깊이 생각하고 설계하는 DEVELOPER"</span>
@@ -28,26 +29,17 @@ function ProfileSlide() {
           <span><strong>2022.05.18</strong> 정보처리기사 합격(필기)</span>
         </p>
       </div>
-      <div className={`${styles.profileImgCon}`}>
+      <div className={swiperSlide.isActive ? `${styles.profileImgCon} ${styles.active}` : `${styles.profileImgCon}`}>
         <div className={`${styles.profileImg}`}>
-          <img src={`${process.env.PUBLIC_URL}/img/blog_screenShot.jpg`} alt="blog_screenShot"/>
-          <img src={`${process.env.PUBLIC_URL}/img/notion_screenShot.jpg`} alt="notion_screenShot"/>
+          <img className={visible === "blog" ? `${styles.visible}` : `${styles.notVisible}`} src={`${process.env.PUBLIC_URL}/img/blog_screenShot.jpg`} alt="blog_screenShot"/>
+          <img className={visible === "notion" ? `${styles.visible}` : `${styles.notVisible}`} src={`${process.env.PUBLIC_URL}/img/notion_screenShot.jpg`} alt="notion_screenShot"/>
         </div>
         <div className={`${styles.profileBtnCon}`}>
-          <button className={`${styles.profileBtn} ${styles.purple}`} onClick={() => window.open('https://kinderteacherdvlp.tistory.com/', '_blank')}>blog link</button>
-          <button className={`${styles.profileBtn} ${styles.violet}`} onClick={() => window.open('https://puzzle-cod-4e9.notion.site/_-a44e0b50b12548f4a4a24dfeeae0bc59', '_blank')}>notion link</button>
+          <button className={`${styles.profileBtn} ${styles.purple}`} onMouseEnter={()=>{setVisible("blog")}} onClick={() => window.open('https://kinderteacherdvlp.tistory.com/', '_blank')}>blog link</button>
+          <button className={`${styles.profileBtn} ${styles.violet}`} onMouseEnter={()=>{setVisible("notion")}} onClick={() => window.open('https://puzzle-cod-4e9.notion.site/_-a44e0b50b12548f4a4a24dfeeae0bc59', '_blank')}>notion link</button>
         </div>
       </div>
       
-      <div onClick={() => {
-          setSideNav(!sideNav);
-        }}>
-        <ToggleButton
-          shadow="rgba(132, 94, 194, 0.16)"
-          background="#845ec2"
-        />
-      </div>
-       {sideNav === true ? (<SideNav sideNav={sideNav} setSideNav={setSideNav} />) : null}
     </section>
   )
 }

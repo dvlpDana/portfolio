@@ -2,18 +2,20 @@ import React from "react";
 import { useState } from "react";
 import styles from './css/sideNav.module.css';
 import { Link } from "react-router-dom";
+import {useSwiper} from 'swiper/react';
 
 function SideNav(props) {
-  // className={`${styles.}`}
+
+  const swiper = useSwiper();
 
   return (
     <>
       <div className={`${styles.sideNavCon}`}>
         <ul className={`${styles.sideNav}`}>
-          <li>profile</li>
-          <li>skill</li>
-          <li>portfolio</li>
-          <li>contact</li>
+          <li onClick={() => swiper.slideTo(1)}>profile</li>
+          <li onClick={() => swiper.slideTo(2)}>skill</li>
+          <li onClick={() => swiper.slideTo(3)}>portfolio</li>
+          <li onClick={() => swiper.slideTo(4)}>contact</li>
         </ul>
         <div className={`${styles.linkBtnCon}`} >
           <div className={`${styles.linkBtn}`} onClick={() => window.open("https://github.com/dvlpDana", "_blank")}>

@@ -34,7 +34,22 @@
   color: var(--gray);
   line-height: 1.5;
   padding-bottom: 3rem;
+  opacity: 0;
 }
+
+.contactTitle.fadeIn {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 .contactTitle strong {
   color: var(--font-color);
@@ -51,6 +66,37 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  opacity: 0;
+}
+
+.contactTxt.fadeLeft {
+  animation: fadeLeft 1s ease-in forwards;
+}
+
+.contactMe.fadeRight {
+  animation: fadeRight 1s ease-in forwards;
+}
+
+@keyframes fadeLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .contactTxt p {
@@ -138,6 +184,10 @@
 
 .contactLinkBtn img {
   height: 30px;
+}
+
+.contactMe {
+  padding-bottom: 2rem;
 }
 
 @media (max-width: 780px) {

@@ -1,20 +1,31 @@
 import React, { useEffect, useState } from "react";
 import styles from "./css/portfolioSlide.module.css";
 
-import { Link, useNavigate } from "react-router-dom";
-
-import ToggleButton from "../components/toggleButton";
-import SideNav from "../components/sideNav";
+import { useNavigate } from "react-router-dom";
+import { useSwiperSlide } from "swiper/react";
 
 function PortfolioSlide() {
 
-  const [sideNav, setSideNav] = useState(false);
+  const swiperSlide = useSwiperSlide();
   const navigate = useNavigate();
+  const [active, setActive] = useState("0");
 
   return (
     <section className={`${styles.secBg}`}>
-      <div className={`${styles.portfolioCardCon}`}>
-        <div className={`${styles.portfolioCard} ${styles.active}`}>
+      <div className={swiperSlide.isActive ? `${styles.portfolioCardCon} ${styles.fadeIn}` : `${styles.portfolioCardCon}`}>
+        <div
+          className={
+            active === "0"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("0");
+          }}
+          onClick={() => {
+            setActive("0");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -64,7 +75,19 @@ function PortfolioSlide() {
             </button>
           </div>
         </div>
-        <div className={`${styles.portfolioCard}`}>
+        <div
+          className={
+            active === "1"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("1");
+          }}
+          onClick={() => {
+            setActive("1");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -114,7 +137,19 @@ function PortfolioSlide() {
             </button>
           </div>
         </div>
-        <div className={`${styles.portfolioCard}`}>
+        <div
+          className={
+            active === "2"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("2");
+          }}
+          onClick={() => {
+            setActive("2");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -164,7 +199,19 @@ function PortfolioSlide() {
             </button>
           </div>
         </div>
-        <div className={`${styles.portfolioCard}`}>
+        <div
+          className={
+            active === "3"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("3");
+          }}
+          onClick={() => {
+            setActive("3");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -214,7 +261,19 @@ function PortfolioSlide() {
             </button>
           </div>
         </div>
-        <div className={`${styles.portfolioCard}`}>
+        <div
+          className={
+            active === "4"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("4");
+          }}
+          onClick={() => {
+            setActive("4");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -264,7 +323,19 @@ function PortfolioSlide() {
             </button>
           </div>
         </div>
-        <div className={`${styles.portfolioCard}`}>
+        <div
+          className={
+            active === "5"
+              ? `${styles.portfolioCard} ${styles.active}`
+              : `${styles.portfolioCard}`
+          }
+          onMouseEnter={() => {
+            setActive("5");
+          }}
+          onClick={() => {
+            setActive("5");
+          }}
+        >
           <div className={`${styles.label}`}>
             <div className={`${styles.icon}`}>
               <img
@@ -315,17 +386,6 @@ function PortfolioSlide() {
           </div>
         </div>
       </div>
-      
-      <div
-        onClick={() => {
-          setSideNav(!sideNav);
-        }}
-      >
-        <ToggleButton shadow="rgba(255, 150, 113, 0.16)" background="#ff9671" />
-      </div>
-      {sideNav === true ? (
-        <SideNav sideNav={sideNav} setSideNav={setSideNav} />
-      ) : null}
     </section>
   );
 }

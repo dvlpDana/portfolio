@@ -14,12 +14,16 @@ const StyledButton = styled.button`
   justify-content : space-evenly;
   border-radius: 50%;
   cursor: pointer;
+  z-index : 100;
   background-color: transparent;
   border-style: none;
   transition: 0.3s;
   box-shadow: 0 0 10px ${(props) => props.shadow};
-  & : hover {
+  &:hover {
     background-color: ${(props) => props.background};
+    span {
+      background-color : white;
+    }
   }
   span {
     width: 30px;
@@ -27,9 +31,6 @@ const StyledButton = styled.button`
     border-radius: 1.5px;
     transition: 0.3s;
     background-color: ${(props) => props.background};
-    & : hover {
-      background-color: white;
-    }
   }
 `;
 
