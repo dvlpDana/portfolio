@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   position: fixed;
-  right: 1rem;
-  top: 1rem;
-  width: 60px;
-  height: 60px;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 50px;
+  height: 50px;
   padding : 10px 0;
   display : flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ const StyledButton = styled.button`
     }
   }
   span {
-    width: 30px;
+    width: 26px;
     height: 3px;
     border-radius: 1.5px;
     transition: 0.3s;

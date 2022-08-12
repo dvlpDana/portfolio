@@ -92,12 +92,18 @@ body {
 
 @media (max-width : 780px) {
   .swiper-pagination {
-    right: 2rem !important;
+    right: 1rem !important;
   }
   .swiper-pagination-bullet {
     width: 0.5rem;
     height: 5rem;
     border-radius: 4px;
     background-color: var(--light-gray);
+  }
+}
+
+@media (max-width: 400px) {
+  .swiper-pagination {
+    display: none;
   }
 }
