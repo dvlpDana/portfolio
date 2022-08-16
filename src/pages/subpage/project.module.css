@@ -1,0 +1,359 @@
+.secBg {
+  height: 100vh;
+}
+
+.horizontableArea {
+  width: 200%;
+  height: 100vh;
+  display: flex;
+}
+
+/* subSideNav */
+
+.subSideNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 120px;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.subSideNav:hover {
+  width: 200px;
+}
+
+.subSideNav:hover .subSideMenu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.subSideNav img {
+  width: 100%;
+}
+
+.backBtn {
+  cursor: pointer;
+}
+
+.backBtn:hover img {
+  transform: rotate(360deg);
+}
+
+.backBtn img {
+  max-width: 60px;
+  transition: 0.5s;
+}
+
+.subSideMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-transform: uppercase;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.subSideMenu span {
+  display: block;
+  padding: 1.5rem 0;
+  position: relative;
+  transition: 0.3s;
+  font-size: 0.8rem;
+
+}
+
+.subSideMenu span:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 1px;
+  bottom: 0;
+  background-color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.subSideMenu span:hover {
+  font-weight: bold;
+}
+
+.circleBtnCon {
+  padding: 2rem 1rem;
+}
+
+.circleBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 1rem;
+  cursor: pointer;
+}
+
+.circleBtn:hover .icon {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.circleBtn:hover span {
+  font-weight: bolder;
+}
+
+.circleBtn .icon {
+  border: 2px solid white;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.circleBtn .icon img {
+  max-width: 30px;
+}
+
+.circleBtn span {
+  margin-top: 0.75rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.subSideNav:hover + .projectInfoCon {
+  margin-left: 200px;
+}
+
+.subSideNav:hover + .documentCon{
+  width: calc(100% - (45% + 20% + 200px));
+}
+
+/* projectInfoCon */
+
+.projectInfoCon {
+  margin-left: 120px;
+  width: 20%;
+  height: 100vh;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-shadow: var(--box-shadowing);
+  background-color: white;
+}
+
+.projectInfoTxt {
+  padding: 2rem;
+}
+
+.infoTitle {
+  color: #3b88d9;
+  text-transform: uppercase;
+  font-family: "rokafSans-bold";
+  font-size: 2.5rem;
+  padding: 2rem 0 0;
+}
+
+.infoSubTitle {
+  font-family: "pretendard-semibold";
+  font-size: 1.5rem;
+  line-height: 1.6;
+  display: block;
+  padding: 2rem 0;
+  color: var(--gray);
+}
+
+.info {
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-indent: 0.5rem;
+}
+
+.projectInfoBox {
+  margin: 2rem;
+  padding: 1.5rem;
+  box-shadow: var(--box-shadowing);
+  border-radius: 1rem;
+}
+
+.boxTitle {
+  font-family: "rokafSans-bold";
+  text-transform: uppercase;
+  color: var(--light-gray);
+  font-size: 1.25rem;
+  padding-bottom: 1.5rem;
+}
+
+.boxHashTagCon {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.boxHashTag {
+  padding: 0.75rem 1.25rem;
+  border-radius: 2rem;
+  color: white;
+  font-family: "pretendard-medium";
+  box-shadow: var(--box-shadowing);
+}
+
+.functionListCon {
+  padding-left: 1rem;
+  line-height: 1.6;
+}
+
+.functionListCon li {
+  position: relative;
+}
+
+.functionListCon li::before {
+  content: "-";
+  position: absolute;
+  top: 0;
+  left: -1rem;
+}
+
+/* videoCon */
+
+.videoCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45%;
+  padding: 0 100px;
+}
+
+.videoCon video {
+  width: 100%;
+  max-width: 1080px;
+  box-shadow: var(--box-shadowing);
+}
+
+/* documentCon */
+
+.documentCon {
+  width: calc(100% - (45% + 20% + 120px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardSwiper {
+  width: 500px;
+  height: 500px;
+}
+
+.cardSwiperSlide {
+  position: relative;
+}
+
+.cardSwiperSlide img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2rem;
+}
+
+.btnDownLoaderCon {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btnDownLoader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--box-shadowing);
+  transition: .3s;
+}
+
+.btnDownLoader:hover {
+  background: #fafafa;
+  box-shadow: inset 8px 8px 16px #dfdfdf, inset -8px -8px 16px #ffffff;
+}
+
+.btnDownLoader:nth-of-type(2) {
+  margin: 0 2rem;
+}
+
+.downLoaderIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.25rem;
+  font-family: "pretendard-medium";
+}
+
+.downLoaderIcon img {
+  width: 25px;
+}
+
+.btnDownLoader span {
+  color: var(--light-gray);
+  display: block;
+  padding-top: 1rem;
+  font-size: smaller;
+}
+
+/* eachSubpageColor */
+
+.subSideNav.firstProject {
+  background-color: var(--first-project-color);
+}
+.subSideNav.secondProject {
+  background-color: var(--second-project-color);
+}
+.subSideNav.thirdProject {
+  background-color: var(--third-project-color);
+}
+.subSideNav.fourthProject {
+  background-color: var(--fourth-project-color);
+}
+.subSideNav.fifthProject {
+  background-color: var(--fifth-project-color);
+}
+.subSideNav.sixthProject {
+  background-color: var(--sixth-project-color);
+}
+
+
+.boxHashTag.firstProject {
+  background-color: var(--first-project-deep-color);
+}
+.boxHashTag.secondProject {
+  background-color: var(--second-project-deep-color);
+}
+.boxHashTag.thirdProject {
+  background-color: var(--third-project-deep-color);
+}
+.boxHashTag.fourthProject {
+  background-color: var(--fourth-project-deep-color);
+}
+.boxHashTag.fifthProject {
+  background-color: var(--fifth-project-deep-color);
+}
+.boxHashTag.sixthProject {
+  background-color: var(--sixth-project-deep-color);
+}
+

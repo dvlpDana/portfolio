@@ -48,6 +48,18 @@
   --yellow-bg: #fee1ad;
   --yellow-shadow: rgba(254, 225, 173, 0.26);
   --box-shadowing: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  --first-project-color : #3b88d9;
+  --first-project-deep-color : #607bd4;
+  --second-project-color : #3871c0;
+  --second-project-color : #1f4374;
+  --third-project-color : #336633;
+  --third-project-deep-color : #0e300e;
+  --fourth-project-color : #04c7e9;
+  --fourth-project-deep-color : #256c78;
+  --fifth-project-color : #ff7a47;
+  --fifth-project-deep-color : #e65821;
+  --sixth-project-color : #f3de54;
+  --sixth-project-deep-color : #ecbf0b;
 }
 
 /* App */
@@ -57,6 +69,8 @@ body {
   font-family: "pretendard-extralight";
   background: #f7f7f7;
 }
+
+/* App swiper */
 
 .swiper {
   width: 100%;
@@ -106,4 +120,11 @@ body {
   .swiper-pagination {
     display: none;
   }
+}
+
+.cardSwiper .swiper-slide {
+  border: 3px solid white;
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadowing);
 }

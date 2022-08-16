@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./css/portfolioSlide.module.css";
 
 import { useNavigate } from "react-router-dom";
@@ -54,7 +54,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -71,7 +71,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>
@@ -116,7 +116,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -133,7 +133,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>
@@ -178,7 +178,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -195,7 +195,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>
@@ -240,7 +240,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -257,7 +257,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>
@@ -302,7 +302,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -319,7 +319,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>
@@ -364,7 +364,7 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span>detail view</span>
+              <span><i>detail </i>view</span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -381,7 +381,7 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span>go web site</span>
+              <span><i>go web </i>site</span>
             </button>
           </div>
         </div>

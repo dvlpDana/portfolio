@@ -240,6 +240,7 @@
   .portfolioCard {
     width: calc(100% / 2 - 1rem);
     margin: 1rem 0;
+    border-radius: 2rem;
   }
 
   .hashtags {
@@ -255,9 +256,13 @@
   .icon img {
     width: 25px;
   }
-
+  
   .lineButtonIcon img {
     height: 20px;
+  }
+
+  .lineButton > span > i {
+    display: none;
   }
 
   .label {
@@ -265,6 +270,25 @@
   }
 
   .lineButton {
+    display: flex;
+  }
+}
+
+@media (min-width: 501px) and (max-width : 780px) {
+
+  .lineButton {
+    display: none;
+  }
+  
+  .portfolioCard .hoverArea{
+    width: 0%
+  } 
+  
+  .portfolioCard:hover .hoverArea{
+    width: 100%;
+  } 
+  
+  .portfolioCard .lineButton {
     display: flex;
   }
 }
@@ -286,7 +310,6 @@
     position: absolute;
     width: 80px;
     height: 100%;
-    background-color: transparent;
   }
 
   .info {
@@ -295,12 +318,33 @@
 
   .icon {
     background-color: white;
-    box-shadow: 1px 1px 6px rgba(255, 255, 255, 0.5);
+    border: 1px solid #eaeaea;
   }
+
+  .hoverArea{
+    padding-left: 80px;
+    padding-top: 1rem;
+    visibility: hidden;
+    opacity: 0;
+  } 
+
+  .portfolioCard:hover .hoverArea{
+    visibility: visible;
+    opacity: 1;
+  } 
+
 }
 
 @media (max-width : 420px) {
   .icon {
     display: none;
   }
+  .label {
+    background-color: transparent;
+  }
+
+  .hoverArea{
+    padding-left: 0;
+  }
+
 }

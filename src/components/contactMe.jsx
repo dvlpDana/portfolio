@@ -56,10 +56,6 @@ export const ContactMe = () => {
   const getIsActive =
     isValidEmail && isValidInput && checkBoxActive === true;
 
-  console.log(isValidEmail);
-  console.log(isValidInput);
-  console.log(checkBoxActive)
-
     const handleButtonValid = () => {
     if (!isValidEmail || !isValidInput || checkBoxActive === false) {
       alert("빈 칸을 기입한 뒤, 전송해주세요.");

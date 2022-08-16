@@ -198,7 +198,9 @@
 
   .contactTitle {
     word-break: keep-all;
+    font-size: 2rem;
   }
+
   .contactTxt {
     width: 90%;
     margin: auto;
