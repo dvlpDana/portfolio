@@ -4,6 +4,28 @@
   position: relative;
 }
 
+
+/* abstractBg */
+.abstractBg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.abstractBg img {
+  position: absolute;
+  width: 20%;
+  opacity: 0.1;
+  transform: translate(-50%, -50%);
+}
+
+.abstractBg img:nth-of-type(1) { top : 5%; left: 5%; opacity: 0.05;}
+.abstractBg img:nth-of-type(2) { top : 70%; left : 80%; width: 10%;}
+.abstractBg img:nth-of-type(3) { top : 60%; left : 10%; width: 15%;}
+.abstractBg img:nth-of-type(4) { top : 10% ; left: 90%; opacity: 0.15; width: 15%;}
+
+/* ----------- */
 .secBg > * {
   flex: 1;
 }

@@ -246,7 +246,7 @@ function PortfolioSlide() {
               className={`${styles.lineButton}`}
               onClick={() =>
                 window.open(
-                  " https://dvlpdana.github.io/Chungjeongwon-renewal-project_2022/",
+                  "https://dvlpdana.github.io/Chungjeongwon-renewal-project_2022/",
                   "_blank"
                 )
               }

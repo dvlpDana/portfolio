@@ -15,7 +15,7 @@ const StyledButton = styled.button`
   border-radius: 50%;
   cursor: pointer;
   z-index : 100;
-  background-color: transparent;
+  background-color: white;
   border-style: none;
   transition: 0.3s;
   box-shadow: 0 0 10px ${(props) => props.shadow};

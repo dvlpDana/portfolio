@@ -63,6 +63,24 @@ function NavSlide() {
         <div onClick={() => swiper.slideTo(3)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_03.svg`} alt="menu"/></div>
         <div onClick={() => swiper.slideTo(4)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_04.svg`} alt="menu"/></div>
       </div>
+      <div className={`${styles.abstractBg}`}>
+      <img
+          src={`${process.env.PUBLIC_URL}/img/background/abstract_1.svg`}
+          alt="abstract"
+        />
+      <img
+          src={`${process.env.PUBLIC_URL}/img/background/abstract_5.svg`}
+          alt="abstract"
+        />
+      <img
+          src={`${process.env.PUBLIC_URL}/img/background/abstract_7.svg`}
+          alt="abstract"
+        />
+      <img
+          src={`${process.env.PUBLIC_URL}/img/background/abstract_9.svg`}
+          alt="abstract"
+        />
+      </div>
     </section>
   );
 }

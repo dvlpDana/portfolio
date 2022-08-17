@@ -157,18 +157,18 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle}`}>k-mooc 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.firstProject}`}>k-mooc 리뉴얼</h1>
           <span className={`${styles.infoSubTitle}`}>
             "유용성과 사용성을 모두 충족한 UI ・ UX 디자인 개선"
           </span>
           <div className={`${styles.info}`}>
-            k-mooc의 방대한 정보를 사용자들이 쉽게 찾을 수 있도록 콘텐츠에
+            K_MOOC의 방대한 정보를 사용자들이 쉽게 찾을 수 있도록 콘텐츠에
             적합한 아이콘 및 이미지를 사용하여 직관성을 향상하였습니다. 또한
             user가 자주 찾는 정보이지만 쉽게 찾기 불편한 콘텐츠는 별도의 배너를
             제작하여 편의성을 증대하였습니다.
             <p>
               이를 통해 사용자들은 원하는 정보를 쉽게 찾게 될 것이고, 유용성과
-              사용성을 모두 충족한 k-mooc 사이트를 더 많은 사용자들이 이용하게
+              사용성을 모두 충족한 K_MOOC 사이트를 더 많은 사용자들이 이용하게
               될 것이라 기대합니다.
             </p>
           </div>
@@ -287,7 +287,7 @@ function ProjectDocuments() {
             <span>K-MOOC_와이어프레임.pdf</span>
           </Link>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/styleguide/project_1_styleguide.pdf`}
+            to={`${process.env.PUBLIC_URL}/download/styleguide/project_1_styleguide.jpg`}
             target="b_blank"
             download
             className={`${styles.btnDownLoader}`}

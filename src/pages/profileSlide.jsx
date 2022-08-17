@@ -39,7 +39,6 @@ function ProfileSlide() {
           <button className={`${styles.profileBtn} ${styles.violet}`} onMouseEnter={()=>{setVisible("notion")}} onClick={() => window.open('https://puzzle-cod-4e9.notion.site/_-a44e0b50b12548f4a4a24dfeeae0bc59', '_blank')}>notion link</button>
         </div>
       </div>
-      
     </section>
   )
 }

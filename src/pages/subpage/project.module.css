@@ -4,6 +4,12 @@
   display: flex;
 }
 
+/* ----sixthProject horizontalbleArea---- */
+
+.horizontableArea.sixProject {
+  width: 120%;
+}
+
 /* subSideNav */
 
 .subSideNav {
@@ -53,6 +59,7 @@
   position: relative;
   transition: 0.3s;
   font-size: 0.8rem;
+  font-family: "pretendard-medium";
 }
 
 .circleBtnCon {
@@ -107,7 +114,6 @@
 }
 
 .infoTitle {
-  color: #3b88d9;
   text-transform: uppercase;
   font-family: "rokafSans-bold";
   font-size: 2.5rem;
@@ -125,7 +131,6 @@
 
 .info {
   line-height: 1.6;
-  text-transform: uppercase;
   text-indent: 0.5rem;
 }
 
@@ -188,6 +193,21 @@
   width: 100%;
   max-width: 1280px;
   box-shadow: var(--box-shadowing);
+}
+
+/* ----fifthProject videoCon---- */
+.videoCon.fifthProject video {
+  width: auto;
+  height: 80%;
+}
+
+/* ----sixthProject videoCon---- */
+.videoCon.sixthProject{
+  width: 80%;
+}
+
+.videoCon.sixthProject video{
+  max-width: 1820px;
 }
 
 /* documentCon */
@@ -265,6 +285,7 @@
 
 /* eachSubpageColor */
 
+/* ----subSideNav---- */
 .subSideNav.firstProject {
   background-color: var(--first-project-color);
 }
@@ -284,6 +305,7 @@
   background-color: var(--sixth-project-color);
 }
 
+/* ----boxHashTag---- */
 .boxHashTag.firstProject {
   background-color: var(--first-project-deep-color);
 }
@@ -301,6 +323,26 @@
 }
 .boxHashTag.sixthProject {
   background-color: var(--sixth-project-deep-color);
+}
+
+/* ----infoTitle---- */
+.infoTitle.firstProject {
+  color: var(--first-project-color);
+}
+.infoTitle.secondProject {
+  color: var(--second-project-color);
+}
+.infoTitle.thirdProject {
+  color: var(--third-project-color);
+}
+.infoTitle.fourthProject {
+  color: var(--fourth-project-color);
+}
+.infoTitle.fifthProject {
+  color: var(--fifth-project-color);
+}
+.infoTitle.sixthProject {
+  color: var(--sixth-project-color);
 }
 
 @media (max-width: 1280px) {
@@ -373,6 +415,11 @@
     justify-content: space-evenly;
     box-shadow: var(--box-shadowing);
     background-color: white;
+  }
+
+  /* ----sixthProject projectInfoCon----- */
+  .projectInfoCon.sixthProject {
+    width: 20%;
   }
 }
 
