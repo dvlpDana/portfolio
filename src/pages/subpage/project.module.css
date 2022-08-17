@@ -24,6 +24,7 @@
   justify-content: space-between;
   padding: 2rem 0;
   z-index: 1000;
+  color: white;
 }
 
 .subSideNav img {
@@ -47,7 +48,6 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: white;
   text-transform: uppercase;
   transition: 0.3s;
   cursor: pointer;
@@ -102,7 +102,6 @@
   margin-top: 0.75rem;
   text-align: center;
   text-transform: uppercase;
-  color: white;
   display: block;
   transition: 0.3s;
 }
@@ -223,6 +222,7 @@
 .cardSwiper {
   width: 500px;
   height: 500px;
+  z-index: 100;
 }
 
 .cardSwiperSlide {
@@ -303,6 +303,7 @@
 }
 .subSideNav.sixthProject {
   background-color: var(--sixth-project-color);
+  color: #9B9165;
 }
 
 /* ----boxHashTag---- */
@@ -382,14 +383,19 @@
     opacity: 0;
   }
 
+  .subSideMenu span {
+    width: 140px;
+    text-align: center;
+  }
+
   .subSideMenu span:hover {
-    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 
   .subSideMenu span:not(:last-child)::before {
     content: "";
     position: absolute;
-    width: 120px;
+    width: 140px;
     height: 1px;
     bottom: 0;
     background-color: white;
@@ -465,7 +471,6 @@
   }
 
   .goToIndexBtn span {
-    color: white;
     padding-left: 1rem;
     font-size: 1.25rem;
   }

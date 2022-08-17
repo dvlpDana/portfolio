@@ -141,6 +141,7 @@
   color: var(--font-color);
   position: relative;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .contactLinkBtn::before,

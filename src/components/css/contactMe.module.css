@@ -68,7 +68,7 @@
 .emailForm .agree label {
   margin-left: 1rem;
   line-height: 1.4;
-  color : var(--gray)
+  color: var(--gray);
 }
 
 .emailForm .submit {
@@ -76,7 +76,7 @@
   margin-bottom: 0;
 }
 
-.submitBtn{
+.submitBtn {
   width: 30%;
   font-size: 1rem;
   text-transform: uppercase;
@@ -84,18 +84,19 @@
   letter-spacing: 1px;
   font-family: "pretendard-semibold";
   font-size: 1.25rem;
-  cursor: pointer;
   position: relative;
-  transition: .3s;
+  transition: 0.3s;
   border-radius: 1rem;
   border-style: none;
 }
 
-.submitBtnAction {background-color: var(--yellow-color);}
+.submitBtnAction {
+  background-color: var(--yellow-color);
+  cursor: pointer;
+}
 
 .submitBtnInaction {
   background-color: var(--lightest-gray);
-  cursor: none; 
 }
 
 .submitBtnAction:hover {
@@ -103,3 +104,79 @@
   border: 2px solid var(--yellow-color);
   color: var(--yellow-color);
 }
+
+/* contactMeModal */
+
+.contactMeModal {
+  position: absolute;
+  width: 350px;
+  height: 250px;
+  top : 0;
+  left: 0;
+  transform: translate(-50%, 0);
+  background-color: #f7ac3b;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--box-shadowing);
+  z-index: 10;
+}
+
+.contactMeModal::before {
+  content: "";
+  position: absolute;
+  width: calc(350px - 1rem);
+  height: calc(250px - 1rem);
+  top : 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fffbf7;
+  border-radius: 0.75rem;
+}
+
+.contactMeModal p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.6;
+  z-index: 20;
+  font-family: "pretendard-medium";
+  color: #a57e65;
+}
+
+.closeBtn {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  background-color: white;
+  border-style: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+  transition: .5s;
+}
+
+.closeBtn:hover {
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.closeBtn span{
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  top : 50%;
+  left: 50%;
+  background-color: #a57e65;
+  transform-origin: 0 0;
+}
+
+.closeBtn span:nth-child(1) {transform: translate(-50%, -50%); rotate: 45deg;}
+.closeBtn span:nth-child(2) {transform: translate(-50%, -50%); rotate: -45deg;}
+
