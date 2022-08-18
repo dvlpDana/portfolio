@@ -105,6 +105,10 @@ body {
 }
 
 @media (max-width : 780px) {
+  :root {
+    font-size: 12px;
+  }
+  
   .swiper-pagination {
     right: 1rem !important;
   }

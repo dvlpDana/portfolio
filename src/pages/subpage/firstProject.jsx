@@ -15,7 +15,7 @@ import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
 function FirstProject() {
-  const navigate = useNavigate();
+
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -257,9 +257,8 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/proposal/project_1_proposal.pdf`}
+            to="/first-project/proposal"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>

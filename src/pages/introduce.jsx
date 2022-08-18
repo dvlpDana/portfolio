@@ -7,7 +7,7 @@ class Introduce extends React.Component {
   handleMouseMove = (event) => {
     this.setState({
       x: event.pageX,
-      y: event.pageY
+      y: event.pageY,
     });
   };
   render() {
@@ -26,7 +26,7 @@ class Introduce extends React.Component {
                 className={`${styles.title} ${styles.englishTitle}`}
                 style={{
                   backgroundPositionX: (this.state.x * -4) / 10 - 100,
-                  backgroundPositionY: (this.state.y * 4) / 100 - 50
+                  backgroundPositionY: (this.state.y * 4) / 100 - 50,
                 }}
               >
                 critical thinking
@@ -37,7 +37,20 @@ class Introduce extends React.Component {
             </h1>
           </div>
         </div>
-        <Link to="index" className={`${styles.nextBtn}`}>Let's find out about me</Link>
+        <Link to="index" className={`${styles.nextBtn}`}>
+          Let's find out about me
+        </Link>
+        <div className={`${styles.guideTxtCon}`}>
+          <span className={`${styles.guideTxt}`}>
+            Try moving the mouse pointer in this box
+          </span>
+          <div className={`${styles.arrow}`}>
+            <img
+              src={`${process.env.PUBLIC_URL}/img/icons/bottom-arrow.png`}
+              alt="arrow"
+            />
+          </div>
+        </div>
       </section>
     );
   }

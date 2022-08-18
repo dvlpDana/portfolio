@@ -75,6 +75,13 @@ const StyledLinkEmail = styled.div`
     width: 250px;
     height: 50px;
   }
+  @media screen and (max-width: 400px) {
+    width: 200px;
+    height : 40px;
+    span {
+      line-height : 40px
+    }
+  }
 `;
 
 function CopyEmail() {

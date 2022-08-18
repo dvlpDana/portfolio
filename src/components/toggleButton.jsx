@@ -32,6 +32,15 @@ const StyledButton = styled.button`
     transition: 0.3s;
     background-color: ${(props) => props.background};
   }
+  @media only screen and (max-width: 768px) {
+    width: 35px;
+    height: 35px;
+    padding : 5px 0;
+    span {
+      width: 20px;
+      height: 2px;
+    }
+  }
 `;
 
 function ToggleButton({ shadow, background }) {

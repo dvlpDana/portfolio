@@ -49,13 +49,13 @@
 
 .profileTitle strong{
   font-family: "rokafSans-bold";
-  font-size: 4rem;
+  font-size: clamp(2.25rem, 3vw, 4rem);
   padding-bottom: 3rem;
 }
 
 .profileTitle span {
   font-family: "pretendard-semibold";
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   line-height: 1.4;
   padding-bottom: 3rem;
   color: var(--gray);
@@ -215,7 +215,7 @@
 
   .profileTxtCon,
   .profileImgCon {
-    width: 90%;
+    width: calc(100% - 60px);
     padding: 0;
   }
 
@@ -233,15 +233,35 @@
 }
 
 @media (max-width : 780px) {
-  .profileTitle strong{
-    font-size: 3rem;
-  }
-  
-  .profileTitle span {
-    font-size: 1.75rem;
-  }
-
   :root {
     font-size: 12px;
+  }
+}
+
+@media (max-width : 400px) {
+  .profileTitle strong,
+  .profileTitle span{
+    padding-bottom: 1.5rem;
+  }
+
+  .profileCharacter {
+    /* border: 1px solid salmon; */
+    padding-left: 1rem;
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+
+  .profileTxtCon h3 {
+    font-size: 1.25rem;
+  }
+
+  .profileExperience span {
+    font-size: 0.8rem;
+  }
+
+  .profileBtn {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
   }
 }

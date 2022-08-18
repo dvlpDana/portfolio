@@ -32,6 +32,9 @@ import FourthProject from "./pages/subpage/fourthProject.jsx";
 import FifthProject from "./pages/subpage/fifthProject.jsx";
 import SixthProject from "./pages/subpage/sixthProject.jsx";
 
+// pdf
+import FirstProjectProposal from "./pages/pdfpage/firstProjectProposal";
+
 function App() {
   return (
     <>
@@ -44,6 +47,7 @@ function App() {
         <Route path="fourth-project" element={<FourthProject />} />
         <Route path="fifth-project" element={<FifthProject />} />
         <Route path="sixth-project" element={<SixthProject />} />
+        <Route path="first-project/proposal" element={<FirstProjectProposal/>} />
       </Routes>
     </>
   );

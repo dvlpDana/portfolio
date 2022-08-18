@@ -1,12 +1,10 @@
 .secBg {
   width: 100%;
   height: 100vh;
-  z-index: 1000;
-  position: fixed;
   background: #f0f0f0;
-  top: 0;
-  left: 0;
 }
+
+/* introCon */
 
 .introCon {
   width: inherit;
@@ -45,14 +43,14 @@
   }
   50% {
     width: 100px;
-    height: 370px;
+    height: 400px;
     background: #f8f8f8;
     box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff,
       0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
   }
   100% {
     width: 70%;
-    height: 370px;
+    height: 400px;
     background: #fafafa;
     box-shadow: 40px 40px 40px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset,
       2px 2px 2px #ffffff inset;
@@ -75,7 +73,7 @@
   font-family: "rokafSans-bold";
   color: var(--gray);
   line-height: 1.6;
-  font-size: 2.75vw;
+  font-size: clamp(2rem, 2.75vw, 3rem);
   animation: titleConAni 1s ease-in-out 3s forwards;
 }
 
@@ -96,6 +94,7 @@
   background-position: center;
   background-size: 200%;
   -webkit-background-clip: text;
+  background-clip: text;
   position: relative;
 }
 
@@ -103,52 +102,12 @@
   color: black;
 }
 
-@media (max-width: 1080px) {
-  .englishTitle {
-    font-size: 5.5vw;
-  }
-  .titleCon {
-    font-size: 3.5vw;
-  }
-}
-
-@media (max-width: 780px) {
-  @keyframes introAni {
-    0% {
-      width: 100px;
-      height: 100px;
-      background: #f0f0f0;
-      box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset,
-        -10px -10px 10px #ffffff inset;
-    }
-    25% {
-      width: 100px;
-      height: 100px;
-      background: #f8f8f8;
-      box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff,
-        0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
-    }
-    50% {
-      width: 100px;
-      height: 200px;
-      background: #f8f8f8;
-      box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff,
-        0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
-    }
-    100% {
-      width: 70%;
-      height: 200px;
-      background: #fafafa;
-      box-shadow: 40px 40px 40px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset,
-        2px 2px 2px #ffffff inset;
-    }
-  }
-}
+/* nextBtn */
 
 .nextBtn {
   position: absolute;
   color: white;
-  bottom: 2rem;
+  bottom: 50px;
   padding: 1rem 2rem;
   left: 50%;
   transform: translateX(-50%);
@@ -199,5 +158,105 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* mouseMovingTxt */
+.guideTxtCon {
+  position: absolute;
+  top : 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 250px));
+}
+
+.guideTxt {
+  opacity: 0;
+  animation: fadeIn 1s ease-in 4s forwards;
+  display: block;
+  font-size: 0.75rem;
+  color : var(--light-gray);
+}
+
+@keyframes fadeIn {
+  0% {
+    margin-top: 1rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+.arrow {
+  position: absolute;
+  bottom : 20px;
+  width: 35px;
+  height: 20px;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: topDownAni 1s ease-in-out 4s infinite alternate;
+}
+
+.arrow img {
+  width: 1.5rem;
+}
+
+/* animation: fadeInAni 2s ease-in 3s forwards; */
+
+@keyframes topDownAni {
+  0% {
+    opacity: 0;
+    bottom : -20px;
+  }
+  100% {
+    opacity: 1;
+    bottom : -25px
+  }
+}
+
+/* mediaquery */
+
+@media (max-width: 1080px) {
+  .englishTitle {
+    font-size: 5.5vw;
+  }
+  .titleCon {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 780px) {
+  @keyframes introAni {
+    0% {
+      width: 100px;
+      height: 100px;
+      background: #f0f0f0;
+      box-shadow: 0 0 0 #cccccc, 0 0 0 #ffffff, 10px 10px 10px #cccccc inset,
+        -10px -10px 10px #ffffff inset;
+    }
+    25% {
+      width: 100px;
+      height: 100px;
+      background: #f8f8f8;
+      box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff,
+        0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+    }
+    50% {
+      width: 100px;
+      height: 200px;
+      background: #f8f8f8;
+      box-shadow: 10px 10px 10px #cccccc, 10px 10px 10px #ffffff,
+        0 0 0 #cccccc inset, 0 0 0 #ffffff inset;
+    }
+    100% {
+      width: 70%;
+      height: 200px;
+      background: #fafafa;
+      box-shadow: 40px 40px 40px #cccccc, 0 0 0 #ffffff, 0 0 0 #cccccc inset,
+        2px 2px 2px #ffffff inset;
+    }
   }
 }
