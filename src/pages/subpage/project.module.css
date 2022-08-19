@@ -600,6 +600,11 @@
     border-radius: 1rem;
   }
 
+  .videoCon.fifthProject video {
+    width: 80%;
+    height: 50%;
+  }
+
   /* documentCon */
   .documentCon {
     width: 100%;

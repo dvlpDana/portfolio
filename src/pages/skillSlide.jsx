@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
 import styles from "./css/skillSlide.module.css";
 import { useSwiperSlide } from "swiper/react";
 
 function SkillSlide() {
-  // <div className={swiperSlide.isActive ? `${styles.profileTxtCon } ${styles.active}` : `${styles.profileTxtCon} `}>
+
   const swiperSlide = useSwiperSlide();
 
   return (

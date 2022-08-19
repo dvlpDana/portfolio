@@ -1,22 +1,16 @@
 import React, {useState} from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
 import { Mobile, Pc } from "../../components/mediaQuery.jsx";
 import ToggleButton from "../../components/toggleButton";
 
-// library
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-cards";
-import { EffectCards, Autoplay } from "swiper";
-
 
 function SixthProject() {
-  const navigate = useNavigate();
+
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (

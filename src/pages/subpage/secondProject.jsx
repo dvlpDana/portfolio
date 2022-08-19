@@ -16,7 +16,7 @@ import { EffectCards, Autoplay } from "swiper";
 
 
 function SecondProject() {
-  const navigate = useNavigate();
+
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (

@@ -54,7 +54,6 @@ function ContactSlide() {
   };
 
   const [checkBoxActive, setCheckBoxActive] = useState(false);
-  const [checked, reChecked] = useState("");  
 
   const isCheckBoxClicked = () => {
     setCheckBoxActive(!checkBoxActive);
@@ -70,8 +69,6 @@ function ContactSlide() {
   const handleButtonValid = () => {
     if (!isValidEmail || !isValidInput || !checkBoxActive) {
       alert("빈 칸을 기입한 뒤, 전송해주세요.");
-    } else{
-      HTMLFormElement.reset()
     }
   };
 
