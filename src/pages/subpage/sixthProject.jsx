@@ -64,7 +64,7 @@ function SubSideNav(props) {
           }}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/img/icons/back_white.png`}
+            src={`${process.env.PUBLIC_URL}/img/icons/home_white.png`}
             alt="back_button"
           />
           <span>메인으로 이동</span>

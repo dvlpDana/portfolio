@@ -27,20 +27,17 @@
   color: white;
 }
 
-.subSideNav img {
-  width: 100%;
-}
-
 .goToIndexBtn {
   cursor: pointer;
+  margin-top: 1rem;
 }
 
 .goToIndexBtn:hover img {
-  transform: rotate(360deg);
+  transform: scale(1.2);
 }
 
 .goToIndexBtn img {
-  max-width: 60px;
+  width: 35px;
   transition: 0.5s;
 }
 
@@ -467,7 +464,7 @@
   }
 
   .goToIndexBtn img {
-    width: 2rem;
+    width: 20px;
   }
 
   .goToIndexBtn span {
@@ -538,10 +535,10 @@
 
   .backBtn {
     position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 1.5rem;
-    right: 1.5rem;
+    width: 35px;
+    height: 35px;
+    right: 2rem;
+    top: 2rem;
     cursor: pointer;
     transition: 0.3s;
   }
@@ -553,7 +550,7 @@
   .backBtn span {
     position: absolute;
     width: 70%;
-    height: 3px;
+    height: 1.5px;
     border-radius: 1.5px;
     background-color: white;
     top: 50%;
@@ -570,8 +567,17 @@
 
   /* projectInfoCon */
   .projectInfoCon {
-    width: 100%;
+    margin: auto;
+    width: 80%;
     padding-top: 2rem;
+  }
+
+  .projectInfoTxt {
+    padding: 0;
+  }
+
+  .projectInfoBox {
+    margin: 0;
   }
 
   .boxHashTagCon {
@@ -585,8 +591,9 @@
 
   /* videoCon */
   .videoCon {
-    width: 100%;
-    padding: 2rem;
+    width: 80%;
+    margin: auto;
+    padding: 3rem 0;
   }
 
   .videoCon video {
@@ -596,7 +603,7 @@
   /* documentCon */
   .documentCon {
     width: 100%;
-    padding: 2rem 0 4rem;
+    padding-bottom: 3rem;
   }
 
   .btnDownLoaderCon {
@@ -627,11 +634,33 @@
 }
 
 @media (max-width: 500px) {
+
+  .secBg {
+    padding: 2rem 0;
+  }
+
   .subSideNav {
     width: 60%;
   }
 
   .subSideNav::before {
     width: 40%;
+  }
+
+  .infoTitle {
+    font-size: 2rem;
+  }
+  
+  .infoSubTitle {
+    font-size: 1.25rem;
+  }
+
+  .boxHashTag {
+    font-size: 0.8rem;
+  }
+
+  .downLoaderIcon,
+  .boxTitle {
+    font-size: 1rem;
   }
 }

@@ -235,6 +235,7 @@ function ContactSlide() {
 function ContactMeModal(props) {
   return (
     <>
+      <div className={`${styles.contactMeModalBg}`}></div>
       <div className={`${styles.contactMeModal}`}>
         <p>
           <span>메일을 성공적으로 보냈습니다.</span>

@@ -136,8 +136,8 @@
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 2rem;
+  right: 2rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -186,16 +186,20 @@
   .linkBtn:last-of-type img {
     width: 25px;
   }
-}
 
-@media (max-width : 400px) {
   .backBtn {
     width: 35px;
     height: 35px;
   }
+
   .backBtn span {
     height: 1.5px;
   }
+  
+}
+
+@media (max-width : 500px) {
+
   .sideNav li{
     font-size: 1.75rem;
   }

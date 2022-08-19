@@ -33,7 +33,11 @@ import FifthProject from "./pages/subpage/fifthProject.jsx";
 import SixthProject from "./pages/subpage/sixthProject.jsx";
 
 // pdf
-import FirstProjectProposal from "./pages/pdfpage/firstProjectProposal";
+import {FirstProjectProposal, FirstProjectWireframe, FirstProjectStyleguide} from "./pages/pdfpage/firstProjectPdf";
+import {SecondProjectProposal, SecondProjectWireframe, SecondProjectStyleguide} from "./pages/pdfpage/secondProjectPdf";
+import {ThirdProjectProposal, ThirdProjectWireframe, ThirdProjectStyleguide} from "./pages/pdfpage/thirdProjectPdf";
+import {FourthProjectProposal, FourthProjectWireframe, FourthProjectStyleguide} from "./pages/pdfpage/fourthProjectPdf";
+import {FifthProjectProposal, FifthProjectWireframe, FifthProjectStyleguide} from "./pages/pdfpage/fifthProjectPdf";
 
 function App() {
   return (
@@ -42,12 +46,32 @@ function App() {
         <Route index element={<Introduce />} />
         <Route path="index" element={<Index />} />
         <Route path="first-project" element={<FirstProject />} />
-        <Route path="second-project" element={<SecondProject />} />
-        <Route path="third-project" element={<ThirdProject />} />
-        <Route path="fourth-project" element={<FourthProject />} />
-        <Route path="fifth-project" element={<FifthProject />} />
-        <Route path="sixth-project" element={<SixthProject />} />
         <Route path="first-project/proposal" element={<FirstProjectProposal/>} />
+        <Route path="first-project/wireframe" element={<FirstProjectWireframe/>} />
+        <Route path="first-project/styleguide" element={<FirstProjectStyleguide/>} />
+        
+        <Route path="second-project" element={<SecondProject />} />
+        <Route path="second-project/proposal" element={<SecondProjectProposal/>} />
+        <Route path="second-project/wireframe" element={<SecondProjectWireframe/>} />
+        <Route path="second-project/styleguide" element={<SecondProjectStyleguide/>} />
+        
+        <Route path="third-project" element={<ThirdProject />} />
+        <Route path="third-project/proposal" element={<ThirdProjectProposal/>} />
+        <Route path="third-project/wireframe" element={<ThirdProjectWireframe/>} />
+        <Route path="third-project/styleguide" element={<ThirdProjectStyleguide/>} />
+        
+        <Route path="fourth-project" element={<FourthProject />} />
+        <Route path="fourth-project/proposal" element={<FourthProjectProposal/>} />
+        <Route path="fourth-project/wireframe" element={<FourthProjectWireframe/>} />
+        <Route path="fourth-project/styleguide" element={<FourthProjectStyleguide/>} />
+        
+        <Route path="fifth-project" element={<FifthProject />} />
+        <Route path="fifth-project/proposal" element={<FifthProjectProposal/>} />
+        <Route path="fifth-project/wireframe" element={<FifthProjectWireframe/>} />
+        <Route path="fifth-project/styleguide" element={<FifthProjectStyleguide/>} />
+        
+        <Route path="sixth-project" element={<SixthProject />} />
+       
       </Routes>
     </>
   );

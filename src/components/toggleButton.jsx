@@ -36,6 +36,8 @@ const StyledButton = styled.button`
     width: 35px;
     height: 35px;
     padding : 5px 0;
+    right: 2rem;
+    top: 2rem;
     span {
       width: 20px;
       height: 2px;

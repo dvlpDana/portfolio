@@ -5,7 +5,7 @@ import { useSwiper } from "swiper/react";
 
 import CopyEmail from "./copyEmail";
 
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { Mobile, Pc } from "./mediaQuery.jsx";
 
 function SideNav(props) {
   const swiper = useSwiper();
@@ -13,40 +13,78 @@ function SideNav(props) {
   return (
     <>
       <div className={`${styles.sideNavCon}`}>
-        <ul className={`${styles.sideNav}`}>
-          <li
-            onClick={() => {
-              swiper.slideTo(1);
-              props.setSideNav(!props.sideNav);
-            }}
-          >
-            profile
-          </li>
-          <li
-            onClick={() => {
-              swiper.slideTo(2);
-              props.setSideNav(!props.sideNav);
-            }}
-          >
-            skill
-          </li>
-          <li
-            onClick={() => {
-              swiper.slideTo(3);
-              props.setSideNav(!props.sideNav);
-            }}
-          >
-            portfolio
-          </li>
-          <li
-            onClick={() => {
-              swiper.slideTo(4);
-              props.setSideNav(!props.sideNav);
-            }}
-          >
-            contact
-          </li>
-        </ul>
+        <Pc>
+          <ul className={`${styles.sideNav}`}>
+            <li
+              onClick={() => {
+                swiper.slideTo(1);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              profile
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(2);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              skill
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(3);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              portfolio
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(4);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              contact
+            </li>
+          </ul>
+        </Pc>
+        <Mobile>
+          <ul className={`${styles.sideNav}`}>
+            <li
+              onClick={() => {
+                swiper.slideTo(0);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              profile
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(1);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              skill
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(2);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              portfolio
+            </li>
+            <li
+              onClick={() => {
+                swiper.slideTo(3);
+                props.setSideNav(!props.sideNav);
+              }}
+            >
+              contact
+            </li>
+          </ul>
+        </Mobile>
         <div className={`${styles.linkBtnCon}`}>
           <div
             className={`${styles.linkBtn}`}

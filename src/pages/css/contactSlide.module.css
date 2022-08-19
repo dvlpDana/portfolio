@@ -21,10 +21,9 @@
 }
 
 .contactSlideCon {
-  padding: 0 8%;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  width: inherit;
 }
 
 .contactTitle {
@@ -35,6 +34,7 @@
   line-height: 1.5;
   padding-bottom: 3rem;
   opacity: 0;
+  word-break: keep-all;
 }
 
 .contactTitle.fadeIn {
@@ -318,7 +318,7 @@
   align-items: center;
   justify-content: center;
   box-shadow: var(--box-shadowing);
-  z-index: 10;
+  z-index: 1000;
 }
 
 .contactMeModal::before {
@@ -377,24 +377,68 @@
 .closeBtn span:nth-child(1) {transform: translate(-50%, -50%); rotate: 45deg;}
 .closeBtn span:nth-child(2) {transform: translate(-50%, -50%); rotate: -45deg;}
 
+.contactMeModalBg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top : 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
 
+/* media query */
+
+@media (max-width : 1000px) {
+  .contactSlideCon {
+    width: 85%;
+  }
+}
 
 @media (max-width: 780px) {
 
-  :root {
-    font-size: 12px;
+  .contactSlideCon {
+    width: 80%;
   }
 
   .contactTitle {
-    word-break: keep-all;
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 
   .contactTxt {
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
+
+  .contactLinkBtn:nth-of-type(1) {
+    margin-right: 2rem;
+  }
+
   .contactMe {
     display: none;
+  }
+
+}
+
+
+@media (max-width : 500px) {
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+}
+
+@media (max-width : 400px) {
+  .contactTitle {
+    font-size: 1.75rem;
+  }
+
+  .contactTxt p, 
+  .contactTxt span{
+    font-size: 1rem;
+  }
+
+  .contactLinkBtn img {
+    height: 20px;
   }
 }

@@ -65,7 +65,7 @@ function SubSideNav(props) {
           }}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/img/icons/back_white.png`}
+            src={`${process.env.PUBLIC_URL}/img/icons/home_white.png`}
             alt="back_button"
           />
           <span>메인으로 이동</span>
@@ -271,9 +271,8 @@ function ProjectDocuments() {
             <span>K-MOOC_기획서.pdf</span>
           </Link>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/wireframe/project_1_wireframe.pdf`}
+            to="/first-project/wireframe"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>
@@ -286,9 +285,8 @@ function ProjectDocuments() {
             <span>K-MOOC_와이어프레임.pdf</span>
           </Link>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/styleguide/project_1_styleguide.jpg`}
+            to="/first-project/styleguide"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>
@@ -298,7 +296,7 @@ function ProjectDocuments() {
               />
               <strong>스타일가이드</strong>
             </i>
-            <span>K-MOOC_스타일가이드.jpeg</span>
+            <span>K-MOOC_스타일가이드.pdf</span>
           </Link>
         </div>
       </div>

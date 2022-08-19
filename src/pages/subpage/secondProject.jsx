@@ -66,7 +66,7 @@ function SubSideNav(props) {
           }}
         >
           <img
-            src={`${process.env.PUBLIC_URL}/img/icons/back_white.png`}
+            src={`${process.env.PUBLIC_URL}/img/icons/home_white.png`}
             alt="back_button"
           />
           <span>메인으로 이동</span>
@@ -255,9 +255,8 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/proposal/project_2_proposal.pdf`}
+            to="/second-project/proposal"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>
@@ -270,9 +269,8 @@ function ProjectDocuments() {
             <span>대구트립로드_기획서.pdf</span>
           </Link>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/wireframe/project_2_wireframe.pdf`}
+            to="/second-project/wireframe"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>
@@ -285,9 +283,8 @@ function ProjectDocuments() {
             <span>대구트립로드_와이어프레임.pdf</span>
           </Link>
           <Link
-            to={`${process.env.PUBLIC_URL}/download/styleguide/project_2_styleguide.jpg`}
+            to="/second-project/styleguide"
             target="b_blank"
-            download
             className={`${styles.btnDownLoader}`}
           >
             <i className={`${styles.downLoaderIcon}`}>
@@ -297,7 +294,7 @@ function ProjectDocuments() {
               />
               <strong>스타일가이드</strong>
             </i>
-            <span>대구트립로드_스타일가이드.jpeg</span>
+            <span>대구트립로드_스타일가이드.pdf</span>
           </Link>
         </div>
       </div>

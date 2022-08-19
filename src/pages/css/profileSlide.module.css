@@ -215,7 +215,7 @@
 
   .profileTxtCon,
   .profileImgCon {
-    width: calc(100% - 60px);
+    width: 85%;
     padding: 0;
   }
 
@@ -236,9 +236,25 @@
   :root {
     font-size: 12px;
   }
+
+  .profileTxtCon,
+  .profileImgCon {
+    width: 80%;
+    padding: 0;
+  }
+
 }
 
 @media (max-width : 400px) {
+
+  .profileTitle strong {
+    font-size: 2rem;
+  }
+
+  .profileTitle span {
+    font-size: 1.25rem;
+  }
+
   .profileTitle strong,
   .profileTitle span{
     padding-bottom: 1.5rem;
