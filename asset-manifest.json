@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.61d5289c.css",
-    "main.js": "/portfolio/static/js/main.98393b84.js",
+    "main.css": "/portfolio/static/css/main.83f6a488.css",
+    "main.js": "/portfolio/static/js/main.e7042681.js",
     "static/js/787.031a3563.chunk.js": "/portfolio/static/js/787.031a3563.chunk.js",
     "static/media/project_2_proposal.pdf": "/portfolio/static/media/project_2_proposal.d1e16425f4f02533ba29.pdf",
     "static/media/project_1_proposal.pdf": "/portfolio/static/media/project_1_proposal.6f73356de382e2d03ee6.pdf",
@@ -32,12 +32,12 @@
     "static/media/project_4_mockup.jpg": "/portfolio/static/media/project_4_mockup.164fe12ab0db60b547c6.jpg",
     "static/media/project_5_mockup.jpg": "/portfolio/static/media/project_5_mockup.2b3f52433a4b6903e99e.jpg",
     "index.html": "/portfolio/index.html",
-    "main.61d5289c.css.map": "/portfolio/static/css/main.61d5289c.css.map",
-    "main.98393b84.js.map": "/portfolio/static/js/main.98393b84.js.map",
+    "main.83f6a488.css.map": "/portfolio/static/css/main.83f6a488.css.map",
+    "main.e7042681.js.map": "/portfolio/static/js/main.e7042681.js.map",
     "787.031a3563.chunk.js.map": "/portfolio/static/js/787.031a3563.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.61d5289c.css",
-    "static/js/main.98393b84.js"
+    "static/css/main.83f6a488.css",
+    "static/js/main.e7042681.js"
   ]
 }
