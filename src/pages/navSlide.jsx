@@ -1,9 +1,8 @@
-import React from 'react';
-import styles from './css/navSlide.module.css';
-import {useSwiper} from 'swiper/react';
+import React from "react";
+import styles from "./css/navSlide.module.css";
+import { useSwiper } from "swiper/react";
 
 function NavSlide() {
-
   const swiper = useSwiper();
 
   return (
@@ -58,25 +57,57 @@ function NavSlide() {
         />
       </div>
       <div className={`${styles.puzzleNav}`}>
-        <div onClick={() => swiper.slideTo(1)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_01.svg`} alt="menu"/></div>
-        <div onClick={() => swiper.slideTo(2)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_02.svg`} alt="menu"/></div>
-        <div onClick={() => swiper.slideTo(3)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_03.svg`} alt="menu"/></div>
-        <div onClick={() => swiper.slideTo(4)}><img src={`${process.env.PUBLIC_URL}/img/svg/menu_04.svg`} alt="menu"/></div>
+        <div onClick={() => swiper.slideTo(1)}>
+          <img
+            src={`${process.env.PUBLIC_URL}/img/svg/menu_01.svg`}
+            alt="menu"
+          />
+        </div>
+        <div onClick={() => swiper.slideTo(2)}>
+          <img
+            src={`${process.env.PUBLIC_URL}/img/svg/menu_02.svg`}
+            alt="menu"
+          />
+        </div>
+        <div onClick={() => swiper.slideTo(3)}>
+          <img
+            src={`${process.env.PUBLIC_URL}/img/svg/menu_03.svg`}
+            alt="menu"
+          />
+        </div>
+        <div onClick={() => swiper.slideTo(4)}>
+          <img
+            src={`${process.env.PUBLIC_URL}/img/svg/menu_04.svg`}
+            alt="menu"
+          />
+        </div>
+      </div>
+      <div className={`${styles.linkGithub}`} onClick={() =>
+              window.open(
+                "https://github.com/dvlpDana/portfolio",
+                "_blank"
+              )
+            }>
+        <img
+          src={`${process.env.PUBLIC_URL}/img/svg/puzzle_07.svg`}
+          alt="link_github"
+        />
+        <span>포트폴리오 소스 보기</span>
       </div>
       <div className={`${styles.abstractBg}`}>
-      <img
+        <img
           src={`${process.env.PUBLIC_URL}/img/background/abstract_1.svg`}
           alt="abstract"
         />
-      <img
+        <img
           src={`${process.env.PUBLIC_URL}/img/background/abstract_5.svg`}
           alt="abstract"
         />
-      <img
+        <img
           src={`${process.env.PUBLIC_URL}/img/background/abstract_7.svg`}
           alt="abstract"
         />
-      <img
+        <img
           src={`${process.env.PUBLIC_URL}/img/background/abstract_9.svg`}
           alt="abstract"
         />
