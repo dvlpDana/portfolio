@@ -277,14 +277,15 @@
   background-color: white;
   border-radius: 2px;
   justify-content: center;
+  align-items: center;
   color: black;
 }
 
-.emailForm .agree label span strong {
+.emailForm .agreeSign strong {
   display: none
 }
 
-.emailForm .agree input:checked+label span strong {
+.emailForm .agree input:checked+label .agreeSign strong {
   display: block;
 }
 

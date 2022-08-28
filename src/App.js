@@ -86,11 +86,17 @@ function Index() {
         <Swiper
           direction={"horizontal"}
           spaceBetween={30}
+          modules={[Mousewheel, Pagination]}
+          mousewheel={true}
           pagination={{
             clickable: true
           }}
-          mousewheel={true}
-          modules={[Mousewheel, Pagination]}
+          onDoubleClick={(e) => {
+            e.preventDefault();
+          }}
+          onDrag={(e) => {
+            e.preventDefault();
+          }}
           className="mySwiper"
         >
           <SwiperSlide>
