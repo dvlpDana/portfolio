@@ -91,12 +91,6 @@ function Index() {
           pagination={{
             clickable: true
           }}
-          onDoubleClick={(e) => {
-            e.preventDefault();
-          }}
-          onDrag={(e) => {
-            e.preventDefault();
-          }}
           className="mySwiper"
         >
           <SwiperSlide>
