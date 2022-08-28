@@ -203,6 +203,8 @@
   }
 }
 
+/* medieQuery */
+
 @media (max-width: 1280px) {
   .explainTxt {
     font-size: 5vw;

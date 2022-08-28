@@ -200,6 +200,8 @@
   color: var(--violot-dark-color);
 }
 
+/* medieQuery */
+
 @media (max-width : 1280px) {
   :root {
     font-size: 14px;

@@ -413,7 +413,7 @@
   z-index: 100;
 }
 
-/* media query */
+/* medieQuery */
 
 @media (max-width : 1000px) {
   .contactSlideCon {

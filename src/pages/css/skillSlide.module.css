@@ -109,10 +109,11 @@
 .skillList div::after {
   content: "";
   position: absolute;
-  width: 100%;
+  width: 110%;
   height: 1px;
   background-color: var(--lightest-gray);
   bottom: -1.5rem;
+  left: 0;
 }
 
 .skillList p {
@@ -137,6 +138,14 @@
   max-width: 70px;
 }
 
+/* medieQuery */
+
+@media (max-width : 1000px) {
+  .skillListCon {
+    width: 85%;
+  }
+}
+
 @media (min-width: 781px) {
   .skillList:nth-of-type(1),
   .skillList:nth-of-type(2),
@@ -153,17 +162,12 @@
     text-align: right;
   }
 
-  .skillList:nth-of-type(5) div::before,
-  .skillList:nth-of-type(6) div::before,
-  .skillList:nth-of-type(7) div::before,
-  .skillList:nth-of-type(8) div::before {
+  .skillList:nth-of-type(5) div::after,
+  .skillList:nth-of-type(6) div::after,
+  .skillList:nth-of-type(7) div::after,
+  .skillList:nth-of-type(8) div::after {
+    left: auto;
     right: 0;
-  }
-}
-
-@media (max-width : 1000px) {
-  .skillListCon {
-    width: 85%;
   }
 }
 
@@ -181,6 +185,12 @@
   .skillList {
     width: calc(100% / 3);
     align-items: center;
+  }
+
+  .skillList div::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
   }
 
   .skillList div img {

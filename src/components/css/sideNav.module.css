@@ -164,6 +164,8 @@
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+/* medieQuery */
+
 @media (max-width: 780px) {
   .sideNavCon::before {
     display: none;

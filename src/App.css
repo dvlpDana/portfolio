@@ -101,6 +101,8 @@ body {
   z-index: 10 !important;
 }
 
+/* medieQuery */
+
 @media (min-width : 781px) {
   .swiper-pagination {
     padding: 1.25rem 0;
