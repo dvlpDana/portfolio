@@ -37,6 +37,9 @@ function ContactSlide() {
     });
 
     setContactMeModal(!contactMeModal);
+
+    setChecked(false);
+
   };
 
   const [mailContent, setMailContent] = useState({
@@ -53,21 +56,17 @@ function ContactSlide() {
     setMailContent({ ...mailContent, [name]: value });
   };
 
-  const [checkBoxActive, setCheckBoxActive] = useState(false);
-
-  const isCheckBoxClicked = () => {
-    setCheckBoxActive(!checkBoxActive);
-  };
+  const [checked, setChecked] = useState(false);
 
   const isValidEmail = email.includes("@") && email.includes(".");
 
   const isValidInput =
     name.length >= 1 && email.length >= 1 && phone.length >= 1;
 
-  const getIsActive = isValidEmail && isValidInput && checkBoxActive === true;
+  const getIsActive = isValidEmail && isValidInput && checked === true;
 
   const handleButtonValid = () => {
-    if (!isValidEmail || !isValidInput || !checkBoxActive) {
+    if (!isValidEmail || !isValidInput || !checked) {
       alert("빈 칸을 기입한 뒤, 전송해주세요.");
     }
   };
@@ -191,16 +190,19 @@ function ContactSlide() {
                   />
                 </div>
                 <div className={`${styles.agree}`}>
-                  <input type="checkbox" onChange={isCheckBoxClicked} />
-                  <label>
+                  <input id="checkAgree" type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+                  <label htmlFor="checkAgree">
+                    <span className={`${styles.agreeSign}`}><strong>✓</strong></span>
+                    <p>
                     제공한 정보는 연락의 목적으로만 사용되며, 목적 이외의
                     용도로는 사용되지 않습니다. 메일 전송에 동의합니다.
+                  </p>
                   </label>
                 </div>
                 <div className={`${styles.submit}`}>
                   <input
                     disabled={
-                      isValidEmail && isValidInput && checkBoxActive
+                      isValidEmail && isValidInput && checked
                         ? false
                         : true
                     }

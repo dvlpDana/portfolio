@@ -253,18 +253,43 @@
 
 .emailForm .agree {
   font-size: smaller;
-  padding: 0 2rem;
-  justify-content: center;
+  display: block;
+  width: 100%;
 }
 
 .emailForm .agree input {
-  border-style: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 .emailForm .agree label {
-  margin-left: 1rem;
-  line-height: 1.4;
-  color: var(--gray);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.emailForm .agreeSign{
+  width : 12px;
+  height: 12px;
+  margin-right: 10px;
+  border: 1px solid #adadad;
+  background-color: white;
+  border-radius: 2px;
+  justify-content: center;
+  color: black;
+}
+
+.emailForm .agree label span strong {
+  display: none
+}
+
+.emailForm .agree input:checked+label span strong {
+  display: block;
+}
+
+.emailForm .agree label p {
+  width: calc(100% - 22px);
 }
 
 .emailForm .submit {
