@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
@@ -14,6 +14,13 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
+function FourthProjectViewer(){
+  return(
+    <>
+      <Outlet/>
+    </>
+  )
+}
 
 function FourthProject() {
 
@@ -34,7 +41,7 @@ function FourthProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -62,7 +69,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -144,7 +151,7 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
           <span></span>
           <span></span>
         </div>
@@ -163,10 +170,10 @@ function ProjectInfo() {
             "잠재적 고객 확보 위한 브랜드 이미지 각인 및 상품 정보의 명확한 전달"
           </span>
           <div className={`${styles.info}`}>
-              사이트를 방문하는 사용자들의 기억에 남을 수 있도록 문구, 이미지, 컬러 등을
-              브랜드의 성격에 맞게 통일감을 주어 Visual Identity를 강조하고자 하였습니다.
-              또한 기존의 분산된 컨텐츠를 같은 성격끼리 분류하여 하나의 섹션에서 공통되게 제공하고자
-              하였습니다.
+            사이트를 방문하는 사용자들의 기억에 남을 수 있도록 문구, 이미지, 컬러 등을
+            브랜드의 성격에 맞게 통일감을 주어 Visual Identity를 강조하고자 하였습니다.
+            또한 기존의 분산된 컨텐츠를 같은 성격끼리 분류하여 하나의 섹션에서 공통되게 제공하고자
+            하였습니다.
             <p>
               이를 통해 사용자들에게 청정원의 브랜드가 지향하는 바와 브랜드 성격에 대해 명확히
               각인시킬 수 있을 것이라 기대합니다.
@@ -213,6 +220,8 @@ function ProjectVideo() {
 }
 
 function ProjectDocuments() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={`${styles.documentCon}`}>
@@ -254,8 +263,8 @@ function ProjectDocuments() {
           </SwiperSlide>
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
-          <Link
-            to="/fourth-project/proposal"
+          <div
+            onClick={() => {navigate("/fourth-project/proposal")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -267,9 +276,9 @@ function ProjectDocuments() {
               <strong>기획서</strong>
             </i>
             <span>청정원_기획서.pdf</span>
-          </Link>
-          <Link
-            to="/fourth-project/wireframe"
+          </div>
+          <div
+            onClick={() => {navigate("/fourth-project/wireframe")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -281,9 +290,9 @@ function ProjectDocuments() {
               <strong>와이어프레임</strong>
             </i>
             <span>청정원_와이어프레임.pdf</span>
-          </Link>
-          <Link
-            to="/fourth-project/styleguide"
+          </div>
+          <div
+            onClick={() => {navigate("/fourth-project/styleguide")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -295,11 +304,11 @@ function ProjectDocuments() {
               <strong>스타일가이드</strong>
             </i>
             <span>청정원_스타일가이드.pdf</span>
-          </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default FourthProject;
+export {FourthProjectViewer, FourthProject};

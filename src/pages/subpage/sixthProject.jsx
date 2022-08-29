@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
 import { useNavigate } from "react-router-dom";
@@ -27,7 +27,7 @@ function SixthProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -54,7 +54,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -136,7 +136,7 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
           <span></span>
           <span></span>
         </div>

@@ -8,7 +8,7 @@ import styleguidePdf from "../../pdf/styleguide/project_3_styleguide.pdf";
 
 
 
-export const ThirdProjectProposal = () => {
+const ThirdProjectProposal = () => {
   return(
     <div className="pdfCon">
       <AllPagePdf pdf={proposalPdf}/>
@@ -16,7 +16,7 @@ export const ThirdProjectProposal = () => {
   )
 };
 
-export const ThirdProjectWireframe = () => {
+const ThirdProjectWireframe = () => {
   return(
     <div className="pdfCon">
       <AllPagePdf pdf={wireframePdf}/>
@@ -24,10 +24,12 @@ export const ThirdProjectWireframe = () => {
   )
 };
 
-export const ThirdProjectStyleguide = () => {
+const ThirdProjectStyleguide = () => {
   return(
     <div className="pdfCon thirdProject">
       <AllPagePdf pdf={styleguidePdf}/>
     </div>
   )
 };
+
+export {ThirdProjectProposal, ThirdProjectWireframe, ThirdProjectStyleguide};

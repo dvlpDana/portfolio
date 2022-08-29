@@ -37,7 +37,7 @@ class Introduce extends React.Component {
             </h1>
           </div>
         </div>
-        <Link to="index" className={`${styles.nextBtn}`}>
+        <Link to="/main-index" className={`${styles.nextBtn}`}>
           Let's find out about me
         </Link>
         <div className={`${styles.guideTxtCon}`}>

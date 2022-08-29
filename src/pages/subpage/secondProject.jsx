@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
@@ -14,6 +14,13 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
+function SecondProjectViewer() {
+  return(
+    <>
+      <Outlet/>
+    </>
+  )
+}
 
 function SecondProject() {
 
@@ -34,7 +41,7 @@ function SecondProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -62,7 +69,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -144,7 +151,7 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
           <span></span>
           <span></span>
         </div>
@@ -163,8 +170,8 @@ function ProjectInfo() {
             "사용자 요구에 적합한 콘텐츠의 접근성 향상"
           </span>
           <div className={`${styles.info}`}>
-              다른 사이트와는 차별화되는 대구트립로드 만의 매력적인 콘텐츠 중 사용자가
-              자주 찾는 내용을 선별후, 이를 정리하여 홈페이지의 첫 화면에 배치하였습니다.
+            다른 사이트와는 차별화되는 대구트립로드 만의 매력적인 콘텐츠 중 사용자가
+            자주 찾는 내용을 선별후, 이를 정리하여 홈페이지의 첫 화면에 배치하였습니다.
             <p>
               이를 통해 사용자는 기존의 사이트와 비교하여 필요한 정보를 바로 찾을 수 있어
               편의성이 향상될 것이고, 정보제공자인 대구 문화 관광에서는 대구의 주요 사업을
@@ -213,6 +220,8 @@ function ProjectVideo() {
 }
 
 function ProjectDocuments() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={`${styles.documentCon}`}>
@@ -254,8 +263,8 @@ function ProjectDocuments() {
           </SwiperSlide>
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
-          <Link
-            to="/second-project/proposal"
+          <div
+            onClick={()=>{navigate("/second-project/proposal")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -267,9 +276,9 @@ function ProjectDocuments() {
               <strong>기획서</strong>
             </i>
             <span>대구트립로드_기획서.pdf</span>
-          </Link>
-          <Link
-            to="/second-project/wireframe"
+          </div>
+          <div
+            onClick={()=>{navigate("/second-project/wireframe")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -281,9 +290,9 @@ function ProjectDocuments() {
               <strong>와이어프레임</strong>
             </i>
             <span>대구트립로드_와이어프레임.pdf</span>
-          </Link>
-          <Link
-            to="/second-project/styleguide"
+          </div>
+          <div
+            onClick={()=>{navigate("/second-project/styleguide")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -295,11 +304,11 @@ function ProjectDocuments() {
               <strong>스타일가이드</strong>
             </i>
             <span>대구트립로드_스타일가이드.pdf</span>
-          </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default SecondProject;
+export {SecondProjectViewer, SecondProject};

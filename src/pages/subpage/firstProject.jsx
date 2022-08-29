@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
@@ -13,6 +13,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
+
+function FirstProjectViewer() {
+  return(
+    <>
+      <Outlet/>
+    </>
+  )
+}
 
 function FirstProject() {
 
@@ -61,7 +69,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -215,6 +223,8 @@ function ProjectVideo() {
 }
 
 function ProjectDocuments() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={`${styles.documentCon}`}>
@@ -256,8 +266,8 @@ function ProjectDocuments() {
           </SwiperSlide>
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
-          <Link
-            to="/first-project/proposal"
+          <div
+            onClick={() => {navigate("/first-project/proposal")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -269,9 +279,9 @@ function ProjectDocuments() {
               <strong>기획서</strong>
             </i>
             <span>K-MOOC_기획서.pdf</span>
-          </Link>
-          <Link
-            to="/first-project/wireframe"
+          </div>
+          <div
+            onClick={() => {navigate("/first-project/wireframe")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -283,9 +293,9 @@ function ProjectDocuments() {
               <strong>와이어프레임</strong>
             </i>
             <span>K-MOOC_와이어프레임.pdf</span>
-          </Link>
-          <Link
-            to="/first-project/styleguide"
+          </div>
+          <div
+            onClick={() => {navigate("/first-project/styleguide")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -297,11 +307,11 @@ function ProjectDocuments() {
               <strong>스타일가이드</strong>
             </i>
             <span>K-MOOC_스타일가이드.pdf</span>
-          </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default FirstProject;
+export {FirstProjectViewer, FirstProject};

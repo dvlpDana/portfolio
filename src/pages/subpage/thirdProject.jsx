@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
@@ -14,6 +14,13 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
+function ThirdProjectViewer() {
+  return(
+    <>
+      <Outlet />
+    </>
+  )
+}
 
 function ThirdProject() {
 
@@ -34,7 +41,7 @@ function ThirdProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -62,7 +69,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -144,7 +151,7 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
           <span></span>
           <span></span>
         </div>
@@ -163,9 +170,9 @@ function ProjectInfo() {
             "브랜드 아이덴티티 강조 및 상품에 대한 필수 정보 제공으로 매출 상승"
           </span>
           <div className={`${styles.info}`}>
-              고급 올리브유 및 발사믹 식초를 수입 ・ 판매하는 살루테유모의 브랜드 아이덴티티를
-              효과적으로 전달할 수 있도록 이미지에 부합하는 포인트 컬러를 선정하였습니다. 또한
-              아이콘 및 버튼 등을 통일감 있게 사용하여 안정감을 주고자 하였습니다.
+            고급 올리브유 및 발사믹 식초를 수입 ・ 판매하는 살루테유모의 브랜드 아이덴티티를
+            효과적으로 전달할 수 있도록 이미지에 부합하는 포인트 컬러를 선정하였습니다. 또한
+            아이콘 및 버튼 등을 통일감 있게 사용하여 안정감을 주고자 하였습니다.
             <p>
               뿐만 아니라 사용자의 연령층을 고려하여 자주 찾는 정보는 별도의 배너로 제작하여
               쉽게 접근할 수 있도록 하였고, 해당 브랜드에 대한 간단한 소개를 메인 인덱스에 노출하여
@@ -215,6 +222,8 @@ function ProjectVideo() {
 }
 
 function ProjectDocuments() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={`${styles.documentCon}`}>
@@ -256,8 +265,8 @@ function ProjectDocuments() {
           </SwiperSlide>
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
-          <Link
-            to="/third-project/proposal"
+          <div
+            onClick={()=>{navigate("/third-project/proposal")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -269,9 +278,9 @@ function ProjectDocuments() {
               <strong>기획서</strong>
             </i>
             <span>살루테유모_기획서.pdf</span>
-          </Link>
-          <Link
-            to="/third-project/wireframe"
+          </div>
+          <div
+            onClick={()=>{navigate("/third-project/wireframe")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -283,9 +292,9 @@ function ProjectDocuments() {
               <strong>와이어프레임</strong>
             </i>
             <span>살루테유모_와이어프레임.pdf</span>
-          </Link>
-          <Link
-            to="/third-project/styleguide"
+          </div>
+          <div
+            onClick={()=>{navigate("/third-project/styleguide")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -297,11 +306,11 @@ function ProjectDocuments() {
               <strong>스타일가이드</strong>
             </i>
             <span>살루테유모_스타일가이드.pdf</span>
-          </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default ThirdProject;
+export {ThirdProjectViewer, ThirdProject};

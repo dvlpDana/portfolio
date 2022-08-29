@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
 // components
 import Horizontable from "../../components/horizontable";
@@ -14,6 +14,13 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
+function FifthProjectViewer() {
+  return(
+    <>
+      <Outlet/>
+    </>
+  )
+}
 
 function FifthProject() {
 
@@ -34,7 +41,7 @@ function FifthProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -62,7 +69,7 @@ function SubSideNav(props) {
         <div
           className={`${styles.goToIndexBtn}`}
           onClick={() => {
-            navigate("/index");
+            navigate("/main-index");
           }}
         >
           <img
@@ -144,7 +151,7 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
           <span></span>
           <span></span>
         </div>
@@ -163,14 +170,14 @@ function ProjectInfo() {
             "사용자 편의성 및 페르소나 고려한 정기구독 프로세스 단순화 및 모바일 ONLY 페이지 구현"
           </span>
           <div className={`${styles.info}`}>
-              '라면 정기 구독'이라는 하나의 목적을 위해 구축된 웹 APP을 모바일 온리로 리뉴얼 하여
-              목적에 충실하게 콘텐츠 및 UI ・ UX를 수정하였습니다.
+            '라면 정기 구독'이라는 하나의 목적을 위해 구축된 웹 APP을 모바일 온리로 리뉴얼 하여
+            목적에 충실하게 콘텐츠 및 UI ・ UX를 수정하였습니다.
             <p>
               사이트의 성격 및 홍보를 강조하는 콘텐츠의 내용은 함축적으로 줄이고, 사용자가 정기구독 프로세스에
               쉽게 접근할 수 있도록 메인 인덱스에 구독 관련 내용을 배치하였습니다.
             </p>
             <p>
-              또한 정기구독 프로세스를 보다 직관적이고 단순하게 변경하여 
+              또한 정기구독 프로세스를 보다 직관적이고 단순하게 변경하여
               사용자들이 편리하게 사용할 수 있도록 하였습니다.
             </p>
           </div>
@@ -216,6 +223,8 @@ function ProjectVideo() {
 }
 
 function ProjectDocuments() {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={`${styles.documentCon}`}>
@@ -257,8 +266,8 @@ function ProjectDocuments() {
           </SwiperSlide>
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
-          <Link
-            to="/fifth-project/proposal"
+          <div
+            onClick={()=>{navigate("/fifth-project/proposal")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -270,9 +279,9 @@ function ProjectDocuments() {
               <strong>기획서</strong>
             </i>
             <span>오늘의라면_기획서.pdf</span>
-          </Link>
-          <Link
-            to="/fifth-project/wireframe"
+          </div>
+          <div
+            onClick={()=>{navigate("/fifth-project/wireframe")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -284,9 +293,9 @@ function ProjectDocuments() {
               <strong>와이어프레임</strong>
             </i>
             <span>오늘의라면_와이어프레임.pdf</span>
-          </Link>
-          <Link
-            to="/fifth-project/styleguide"
+          </div>
+          <div
+            onClick={()=>{navigate("/fifth-project/styleguide")}}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -298,11 +307,11 @@ function ProjectDocuments() {
               <strong>스타일가이드</strong>
             </i>
             <span>오늘의라면_스타일가이드.pdf</span>
-          </Link>
+          </div>
         </div>
       </div>
     </>
   );
 }
 
-export default FifthProject;
+export {FifthProjectViewer, FifthProject};

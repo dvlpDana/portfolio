@@ -25,11 +25,11 @@ import PortfolioSlide from "./pages/portfolioSlide.jsx";
 import ContactSlide from "./pages/contactSlide.jsx";
 
 // subpage
-import FirstProject from "./pages/subpage/firstProject.jsx";
-import SecondProject from "./pages/subpage/secondProject.jsx";
-import ThirdProject from "./pages/subpage/thirdProject.jsx";
-import FourthProject from "./pages/subpage/fourthProject.jsx";
-import FifthProject from "./pages/subpage/fifthProject.jsx";
+import {FirstProjectViewer, FirstProject} from "./pages/subpage/firstProject.jsx";
+import {SecondProjectViewer ,SecondProject} from "./pages/subpage/secondProject.jsx";
+import {ThirdProjectViewer ,ThirdProject} from "./pages/subpage/thirdProject.jsx";
+import {FourthProjectViewer, FourthProject} from "./pages/subpage/fourthProject.jsx";
+import {FifthProjectViewer, FifthProject} from "./pages/subpage/fifthProject.jsx";
 import SixthProject from "./pages/subpage/sixthProject.jsx";
 
 // pdf
@@ -43,33 +43,44 @@ function App() {
   return (
     <>
       <Routes>
-        <Route index element={<Introduce />} />
-        <Route path="index" element={<Index />} />
-        <Route path="first-project" element={<FirstProject />} />
-        <Route path="first-project/proposal" element={<FirstProjectProposal/>} />
-        <Route path="first-project/wireframe" element={<FirstProjectWireframe/>} />
-        <Route path="first-project/styleguide" element={<FirstProjectStyleguide/>} />
+        <Route path="*" element={<Introduce />} />
+        <Route path="main-index" element={<MainIndex />} />
+
+        <Route path="first-project/" element={<FirstProjectViewer />}>
+          <Route index element={<FirstProject />} />
+          <Route path="proposal" element={<FirstProjectProposal />} />
+          <Route path="wireframe" element={<FirstProjectWireframe />} />
+          <Route path="styleguide" element={<FirstProjectStyleguide />} />
+        </Route>
+
+        <Route path="second-project/" element={<SecondProjectViewer />}>
+          <Route index element={<SecondProject />} />
+          <Route path="proposal" element={<SecondProjectProposal/>} />
+          <Route path="wireframe" element={<SecondProjectWireframe/>} />
+          <Route path="styleguide" element={<SecondProjectStyleguide/>} />
+        </Route>        
+
+        <Route path="third-project/" element={<ThirdProjectViewer />}>
+          <Route index element={<ThirdProject />} />          
+          <Route path="proposal" element={<ThirdProjectProposal/>} />
+          <Route path="wireframe" element={<ThirdProjectWireframe/>} />
+          <Route path="styleguide" element={<ThirdProjectStyleguide/>} />
+        </Route>  
+
+        <Route path="fourth-project/" element={<FourthProjectViewer />}>
+          <Route index element={<FourthProject  />} />  
+          <Route path="proposal" element={<FourthProjectProposal/>} />
+          <Route path="wireframe" element={<FourthProjectWireframe/>} />
+          <Route path="styleguide" element={<FourthProjectStyleguide/>} />
+        </Route>  
         
-        <Route path="second-project" element={<SecondProject />} />
-        <Route path="second-project/proposal" element={<SecondProjectProposal/>} />
-        <Route path="second-project/wireframe" element={<SecondProjectWireframe/>} />
-        <Route path="second-project/styleguide" element={<SecondProjectStyleguide/>} />
-        
-        <Route path="third-project" element={<ThirdProject />} />
-        <Route path="third-project/proposal" element={<ThirdProjectProposal/>} />
-        <Route path="third-project/wireframe" element={<ThirdProjectWireframe/>} />
-        <Route path="third-project/styleguide" element={<ThirdProjectStyleguide/>} />
-        
-        <Route path="fourth-project" element={<FourthProject />} />
-        <Route path="fourth-project/proposal" element={<FourthProjectProposal/>} />
-        <Route path="fourth-project/wireframe" element={<FourthProjectWireframe/>} />
-        <Route path="fourth-project/styleguide" element={<FourthProjectStyleguide/>} />
-        
-        <Route path="fifth-project" element={<FifthProject />} />
-        <Route path="fifth-project/proposal" element={<FifthProjectProposal/>} />
-        <Route path="fifth-project/wireframe" element={<FifthProjectWireframe/>} />
-        <Route path="fifth-project/styleguide" element={<FifthProjectStyleguide/>} />
-        
+        <Route path="fifth-project/" element={<FifthProjectViewer />}>
+          <Route index element={<FifthProject />} />  
+          <Route path="proposal" element={<FifthProjectProposal/>} />
+          <Route path="wireframe" element={<FifthProjectWireframe/>} />
+          <Route path="styleguide" element={<FifthProjectStyleguide/>} />
+        </Route>  
+       
         <Route path="sixth-project" element={<SixthProject />} />
        
       </Routes>
@@ -77,7 +88,7 @@ function App() {
   );
 }
 
-function Index() {
+function MainIndex() {
   const [sideNav, setSideNav] = useState(false);
 
   return (
