@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.2d0cf6a9.css",
-    "main.js": "/portfolio/static/js/main.57f5521e.js",
+    "main.js": "/portfolio/static/js/main.fad68850.js",
     "static/js/393.f6dd73cb.chunk.js": "/portfolio/static/js/393.f6dd73cb.chunk.js",
-    "static/js/787.031a3563.chunk.js": "/portfolio/static/js/787.031a3563.chunk.js",
+    "static/js/787.202b8111.chunk.js": "/portfolio/static/js/787.202b8111.chunk.js",
     "static/media/project_2_proposal.pdf": "/portfolio/static/media/project_2_proposal.33e08708b73d0c8635f7.pdf",
     "static/media/project_1_proposal.pdf": "/portfolio/static/media/project_1_proposal.c6e35ed93b6b764fc9fe.pdf",
     "static/media/Pretendard-ExtraLight.ttf": "/portfolio/static/media/Pretendard-ExtraLight.50a2b2a1b0307c05712d.ttf",
@@ -33,12 +33,12 @@
     "static/media/project_5_styleguide.pdf": "/portfolio/static/media/project_5_styleguide.ba2e004244c9657c333e.pdf",
     "index.html": "/portfolio/index.html",
     "main.2d0cf6a9.css.map": "/portfolio/static/css/main.2d0cf6a9.css.map",
-    "main.57f5521e.js.map": "/portfolio/static/js/main.57f5521e.js.map",
+    "main.fad68850.js.map": "/portfolio/static/js/main.fad68850.js.map",
     "393.f6dd73cb.chunk.js.map": "/portfolio/static/js/393.f6dd73cb.chunk.js.map",
-    "787.031a3563.chunk.js.map": "/portfolio/static/js/787.031a3563.chunk.js.map"
+    "787.202b8111.chunk.js.map": "/portfolio/static/js/787.202b8111.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2d0cf6a9.css",
-    "static/js/main.57f5521e.js"
+    "static/js/main.fad68850.js"
   ]
 }
