@@ -1,5 +1,16 @@
 import React, { useState } from "react";
-import { Document, Page } from "react-pdf/dist/esm/entry.webpack";
+import { Document, Page } from 'react-pdf';
+
+import { pdfjs } from 'react-pdf';
+import pdfjsWorker from "pdfjs-dist/build/pdf.worker.entry";
+
+pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker;
+
+if (typeof window !== 'undefined' && 'Worker' in window) {
+  pdfjs.GlobalWorkerOptions.workerPort = new Worker(
+    new URL('pdfjs-dist/legacy/build/pdf.worker', import.meta.url)
+  )
+};
 
 export default function AllPages(props) {
   const [numPages, setNumPages] = useState(null);

@@ -46,5 +46,9 @@
       "last 1 safari version"
     ]
   },
-  "homepage": "https://dvlpdana.github.io/portfolio"
+  "homepage": "https://dvlpdana.github.io/portfolio",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "worker-loader": "^3.0.8"
+  }
 }

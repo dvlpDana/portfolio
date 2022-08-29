@@ -48,7 +48,6 @@ const Horizontable = ({ children }) => {
 
   const onWheel = (event) => {
     event.preventDefault()
-
     scrollingLeft(ref.current.scrollLeft + event.deltaY)
   }
 
