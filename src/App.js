@@ -81,35 +81,35 @@ function App() {
         <Route path="*" element={<Introduce />} />
         <Route path="main-index" element={<MainIndex />} />
 
-        <Route path="first-project/" element={<FirstProjectViewer />}>
+        <Route path="first-project/*" element={<FirstProjectViewer />}>
           <Route index element={<FirstProject />} />
           <Route path="proposal" element={<FirstProjectProposal />} />
           <Route path="wireframe" element={<FirstProjectWireframe />} />
           <Route path="styleguide" element={<FirstProjectStyleguide />} />
         </Route>
 
-        <Route path="second-project/" element={<SecondProjectViewer />}>
+        <Route path="second-project/*" element={<SecondProjectViewer />}>
           <Route index element={<SecondProject />} />
           <Route path="proposal" element={<SecondProjectProposal />} />
           <Route path="wireframe" element={<SecondProjectWireframe />} />
           <Route path="styleguide" element={<SecondProjectStyleguide />} />
         </Route>
 
-        <Route path="third-project/" element={<ThirdProjectViewer />}>
+        <Route path="third-project/*" element={<ThirdProjectViewer />}>
           <Route index element={<ThirdProject />} />
           <Route path="proposal" element={<ThirdProjectProposal />} />
           <Route path="wireframe" element={<ThirdProjectWireframe />} />
           <Route path="styleguide" element={<ThirdProjectStyleguide />} />
         </Route>
 
-        <Route path="fourth-project/" element={<FourthProjectViewer />}>
+        <Route path="fourth-project/*" element={<FourthProjectViewer />}>
           <Route index element={<FourthProject />} />
           <Route path="proposal" element={<FourthProjectProposal />} />
           <Route path="wireframe" element={<FourthProjectWireframe />} />
           <Route path="styleguide" element={<FourthProjectStyleguide />} />
         </Route>
 
-        <Route path="fifth-project/" element={<FifthProjectViewer />}>
+        <Route path="fifth-project/*" element={<FifthProjectViewer />}>
           <Route index element={<FifthProject />} />
           <Route path="proposal" element={<FifthProjectProposal />} />
           <Route path="wireframe" element={<FifthProjectWireframe />} />
