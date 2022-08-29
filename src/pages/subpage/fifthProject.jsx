@@ -15,15 +15,14 @@ import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
 function FifthProjectViewer() {
-  return(
+  return (
     <>
-      <Outlet/>
+      <Outlet />
     </>
-  )
+  );
 }
 
 function FifthProject() {
-
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -52,7 +51,10 @@ function FifthProject() {
               setSubSideNav(!subSideNav);
             }}
           >
-            <ToggleButton shadow="rgba(255, 122, 71, 0.2)" background="#ff7a47" />
+            <ToggleButton
+              shadow="rgba(255, 122, 71, 0.2)"
+              background="#ff7a47"
+            />
           </div>
         </section>
       </Mobile>
@@ -151,7 +153,12 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
+        <div
+          className={`${styles.backBtn}`}
+          onClick={() => {
+            props.setSubSideNav(!props.subSideNav);
+          }}
+        >
           <span></span>
           <span></span>
         </div>
@@ -165,16 +172,21 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle} ${styles.fifthProject}`}>오늘의 라면 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.fifthProject}`}>
+            오늘의 라면 리뉴얼
+          </h1>
           <span className={`${styles.infoSubTitle}`}>
-            "사용자 편의성 및 페르소나 고려한 정기구독 프로세스 단순화 및 모바일 ONLY 페이지 구현"
+            "사용자 편의성 및 페르소나 고려한 정기구독 프로세스 단순화 및 모바일
+            ONLY 페이지 구현"
           </span>
           <div className={`${styles.info}`}>
-            '라면 정기 구독'이라는 하나의 목적을 위해 구축된 웹 APP을 모바일 온리로 리뉴얼 하여
-            목적에 충실하게 콘텐츠 및 UI ・ UX를 수정하였습니다.
+            '라면 정기 구독'이라는 하나의 목적을 위해 구축된 웹 APP을 모바일
+            온리로 리뉴얼 하여 목적에 충실하게 콘텐츠 및 UI ・ UX를
+            수정하였습니다.
             <p>
-              사이트의 성격 및 홍보를 강조하는 콘텐츠의 내용은 함축적으로 줄이고, 사용자가 정기구독 프로세스에
-              쉽게 접근할 수 있도록 메인 인덱스에 구독 관련 내용을 배치하였습니다.
+              사이트의 성격 및 홍보를 강조하는 콘텐츠의 내용은 함축적으로
+              줄이고, 사용자가 정기구독 프로세스에 쉽게 접근할 수 있도록 메인
+              인덱스에 구독 관련 내용을 배치하였습니다.
             </p>
             <p>
               또한 정기구독 프로세스를 보다 직관적이고 단순하게 변경하여
@@ -267,7 +279,9 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <div
-            onClick={()=>{navigate("/fifth-project/proposal")}}
+            onClick={() => {
+              navigate("/fifth-project/proposal");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -281,7 +295,9 @@ function ProjectDocuments() {
             <span>오늘의라면_기획서.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/fifth-project/wireframe")}}
+            onClick={() => {
+              navigate("/fifth-project/wireframe");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -295,7 +311,9 @@ function ProjectDocuments() {
             <span>오늘의라면_와이어프레임.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/fifth-project/styleguide")}}
+            onClick={() => {
+              navigate("/fifth-project/styleguide");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -314,4 +332,4 @@ function ProjectDocuments() {
   );
 }
 
-export {FifthProjectViewer, FifthProject};
+export { FifthProjectViewer, FifthProject };

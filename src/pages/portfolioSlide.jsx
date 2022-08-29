@@ -5,14 +5,19 @@ import { useNavigate } from "react-router-dom";
 import { useSwiperSlide } from "swiper/react";
 
 function PortfolioSlide() {
-
   const swiperSlide = useSwiperSlide();
   const navigate = useNavigate();
   const [active, setActive] = useState("0");
 
   return (
     <section className={`${styles.secBg}`}>
-      <div className={swiperSlide.isActive ? `${styles.portfolioCardCon} ${styles.fadeIn}` : `${styles.portfolioCardCon}`}>
+      <div
+        className={
+          swiperSlide.isActive
+            ? `${styles.portfolioCardCon} ${styles.fadeIn}`
+            : `${styles.portfolioCardCon}`
+        }
+      >
         <div
           className={
             active === "0"
@@ -54,7 +59,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -71,7 +78,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>
@@ -116,7 +125,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -133,7 +144,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>
@@ -178,7 +191,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -195,7 +210,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>
@@ -240,7 +257,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -257,7 +276,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>
@@ -302,7 +323,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -319,7 +342,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>
@@ -364,7 +389,9 @@ function PortfolioSlide() {
                   alt="view"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>detail </i>view</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>detail </i>view
+              </span>
             </button>
             <button
               className={`${styles.lineButton}`}
@@ -381,7 +408,9 @@ function PortfolioSlide() {
                   alt="link"
                 />
               </span>
-              <span className={`${styles.lineButtonTxt}`}><i>go web </i>site</span>
+              <span className={`${styles.lineButtonTxt}`}>
+                <i>go web </i>site
+              </span>
             </button>
           </div>
         </div>

@@ -7,7 +7,7 @@ class Introduce extends React.Component {
   handleMouseMove = (event) => {
     this.setState({
       x: event.pageX,
-      y: event.pageY,
+      y: event.pageY
     });
   };
   render() {
@@ -26,7 +26,7 @@ class Introduce extends React.Component {
                 className={`${styles.title} ${styles.englishTitle}`}
                 style={{
                   backgroundPositionX: (this.state.x * -4) / 10 - 100,
-                  backgroundPositionY: (this.state.y * 4) / 100 - 50,
+                  backgroundPositionY: (this.state.y * 4) / 100 - 50
                 }}
               >
                 critical thinking

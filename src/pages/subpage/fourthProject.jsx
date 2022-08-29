@@ -14,16 +14,15 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
-function FourthProjectViewer(){
-  return(
+function FourthProjectViewer() {
+  return (
     <>
-      <Outlet/>
+      <Outlet />
     </>
-  )
+  );
 }
 
 function FourthProject() {
-
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -52,7 +51,10 @@ function FourthProject() {
               setSubSideNav(!subSideNav);
             }}
           >
-            <ToggleButton shadow="rgba(4, 199, 233, 0.2)" background="#04c7e9" />
+            <ToggleButton
+              shadow="rgba(4, 199, 233, 0.2)"
+              background="#04c7e9"
+            />
           </div>
         </section>
       </Mobile>
@@ -151,7 +153,12 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
+        <div
+          className={`${styles.backBtn}`}
+          onClick={() => {
+            props.setSubSideNav(!props.subSideNav);
+          }}
+        >
           <span></span>
           <span></span>
         </div>
@@ -165,18 +172,21 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle} ${styles.fourthProject}`}>청정원 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.fourthProject}`}>
+            청정원 리뉴얼
+          </h1>
           <span className={`${styles.infoSubTitle}`}>
-            "잠재적 고객 확보 위한 브랜드 이미지 각인 및 상품 정보의 명확한 전달"
+            "잠재적 고객 확보 위한 브랜드 이미지 각인 및 상품 정보의 명확한
+            전달"
           </span>
           <div className={`${styles.info}`}>
-            사이트를 방문하는 사용자들의 기억에 남을 수 있도록 문구, 이미지, 컬러 등을
-            브랜드의 성격에 맞게 통일감을 주어 Visual Identity를 강조하고자 하였습니다.
-            또한 기존의 분산된 컨텐츠를 같은 성격끼리 분류하여 하나의 섹션에서 공통되게 제공하고자
-            하였습니다.
+            사이트를 방문하는 사용자들의 기억에 남을 수 있도록 문구, 이미지,
+            컬러 등을 브랜드의 성격에 맞게 통일감을 주어 Visual Identity를
+            강조하고자 하였습니다. 또한 기존의 분산된 컨텐츠를 같은 성격끼리
+            분류하여 하나의 섹션에서 공통되게 제공하고자 하였습니다.
             <p>
-              이를 통해 사용자들에게 청정원의 브랜드가 지향하는 바와 브랜드 성격에 대해 명확히
-              각인시킬 수 있을 것이라 기대합니다.
+              이를 통해 사용자들에게 청정원의 브랜드가 지향하는 바와 브랜드
+              성격에 대해 명확히 각인시킬 수 있을 것이라 기대합니다.
             </p>
           </div>
         </div>
@@ -195,8 +205,13 @@ function ProjectInfo() {
           </p>
           <h2 className={`${styles.boxTitle}`}>main function</h2>
           <ol className={`${styles.functionListCon}`}>
-            <li>디바이스 종류에 따른 웹 페이지 크기가 자동적으로 재조정되는 반응형 웹 구현</li>
-            <li>사용자 움직임에 따른 hover effect, slide down, toggle 기능 구현</li>
+            <li>
+              디바이스 종류에 따른 웹 페이지 크기가 자동적으로 재조정되는 반응형
+              웹 구현
+            </li>
+            <li>
+              사용자 움직임에 따른 hover effect, slide down, toggle 기능 구현
+            </li>
           </ol>
         </div>
       </div>
@@ -264,7 +279,9 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <div
-            onClick={() => {navigate("/fourth-project/proposal")}}
+            onClick={() => {
+              navigate("/fourth-project/proposal");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -278,7 +295,9 @@ function ProjectDocuments() {
             <span>청정원_기획서.pdf</span>
           </div>
           <div
-            onClick={() => {navigate("/fourth-project/wireframe")}}
+            onClick={() => {
+              navigate("/fourth-project/wireframe");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -292,7 +311,9 @@ function ProjectDocuments() {
             <span>청정원_와이어프레임.pdf</span>
           </div>
           <div
-            onClick={() => {navigate("/fourth-project/styleguide")}}
+            onClick={() => {
+              navigate("/fourth-project/styleguide");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -311,4 +332,4 @@ function ProjectDocuments() {
   );
 }
 
-export {FourthProjectViewer, FourthProject};
+export { FourthProjectViewer, FourthProject };

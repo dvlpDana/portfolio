@@ -7,27 +7,27 @@ import wireframePdf from "../../pdf/wireframe/project_1_wireframe.pdf";
 import styleguidePdf from "../../pdf/styleguide/project_1_styleguide.pdf";
 
 const FirstProjectProposal = () => {
-  return(
+  return (
     <div className="pdfCon">
-      <AllPagePdf pdf={proposalPdf}/>
+      <AllPagePdf pdf={proposalPdf} />
     </div>
-  )
+  );
 };
 
 const FirstProjectWireframe = () => {
-  return(
+  return (
     <div className="pdfCon">
-      <AllPagePdf pdf={wireframePdf}/>
+      <AllPagePdf pdf={wireframePdf} />
     </div>
-  )
+  );
 };
 
 const FirstProjectStyleguide = () => {
-  return(
+  return (
     <div className="pdfCon">
-      <AllPagePdf pdf={styleguidePdf}/>
+      <AllPagePdf pdf={styleguidePdf} />
     </div>
-  )
+  );
 };
 
-export {FirstProjectProposal, FirstProjectWireframe, FirstProjectStyleguide};
+export { FirstProjectProposal, FirstProjectWireframe, FirstProjectStyleguide };

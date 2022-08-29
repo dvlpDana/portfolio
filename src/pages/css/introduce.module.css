@@ -164,7 +164,7 @@
 /* mouseMovingTxt */
 .guideTxtCon {
   position: absolute;
-  top : 50%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, calc(-50% - 250px));
 }
@@ -174,7 +174,7 @@
   animation: fadeIn 1s ease-in 4s forwards;
   display: block;
   font-size: 0.75rem;
-  color : var(--light-gray);
+  color: var(--light-gray);
 }
 
 @keyframes fadeIn {
@@ -190,7 +190,7 @@
 
 .arrow {
   position: absolute;
-  bottom : 20px;
+  bottom: 20px;
   width: 35px;
   height: 20px;
   bottom: -25px;
@@ -209,11 +209,11 @@
 @keyframes topDownAni {
   0% {
     opacity: 0;
-    bottom : -20px;
+    bottom: -20px;
   }
   100% {
     opacity: 1;
-    bottom : -25px
+    bottom: -25px;
   }
 }
 

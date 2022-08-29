@@ -5,15 +5,15 @@
   position: relative;
 }
 
-.secBg::before{
+.secBg::before {
   content: "PROFILE";
   position: absolute;
   font-family: "scdream-bold";
-  color : var(--violet-color);
+  color: var(--violet-color);
   font-size: 10vw;
   letter-spacing: 5px;
   opacity: 0.1;
-  top : 1rem;
+  top: 1rem;
   left: 1rem;
   z-index: -1;
 }
@@ -30,7 +30,7 @@
 
 .profileTxtCon.active {
   animation: fadeLeft 1s ease-in forwards;
-} 
+}
 
 @keyframes fadeLeft {
   0% {
@@ -47,7 +47,7 @@
   display: block;
 }
 
-.profileTitle strong{
+.profileTitle strong {
   font-family: "rokafSans-bold";
   font-size: clamp(2.25rem, 3vw, 4rem);
   padding-bottom: 3rem;
@@ -70,7 +70,7 @@
   margin-bottom: 3rem;
 }
 
-.profileCharacter::before{
+.profileCharacter::before {
   content: "";
   position: absolute;
   width: 1px;
@@ -80,7 +80,7 @@
   top: 0;
 }
 
-.profileCharacter li{
+.profileCharacter li {
   position: relative;
   padding-left: 1rem;
 }
@@ -88,7 +88,7 @@
 .profileCharacter li::before {
   content: "・";
   position: absolute;
-  top : 0;
+  top: 0;
   left: -0.5rem;
 }
 
@@ -97,7 +97,7 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   padding-bottom: 1.5rem;
-  color : var(--gray)
+  color: var(--gray);
 }
 
 .profileExperience {
@@ -125,7 +125,7 @@
 
 .profileImgCon.active {
   animation: fadeRight 1s ease-in forwards;
-} 
+}
 
 @keyframes fadeRight {
   0% {
@@ -148,8 +148,8 @@
 
 .profileImg img {
   position: absolute;
-  top : 50%;
-  left : 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   border-radius: 1rem;
@@ -176,7 +176,7 @@
   font-size: 1.15rem;
   color: white;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   border: 2px solid transparent;
 }
 
@@ -187,7 +187,7 @@
 .profileBtn.purple:hover {
   border: 2px solid var(--violet-color);
   background-color: white;
-  color: var(--violet-color)
+  color: var(--violet-color);
 }
 
 .profileBtn.violet {
@@ -202,13 +202,13 @@
 
 /* medieQuery */
 
-@media (max-width : 1280px) {
+@media (max-width: 1280px) {
   :root {
     font-size: 14px;
   }
 }
 
-@media (max-width : 1000px) {
+@media (max-width: 1000px) {
   .secBg {
     flex-direction: column;
     justify-content: center;
@@ -234,7 +234,7 @@
   }
 }
 
-@media (max-width : 780px) {
+@media (max-width: 780px) {
   :root {
     font-size: 12px;
   }
@@ -244,11 +244,9 @@
     width: 80%;
     padding: 0;
   }
-
 }
 
-@media (max-width : 400px) {
-
+@media (max-width: 400px) {
   .profileTitle strong {
     font-size: 2rem;
   }
@@ -258,7 +256,7 @@
   }
 
   .profileTitle strong,
-  .profileTitle span{
+  .profileTitle span {
     padding-bottom: 1.5rem;
   }
 

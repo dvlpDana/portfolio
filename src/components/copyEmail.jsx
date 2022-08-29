@@ -77,9 +77,9 @@ const StyledLinkEmail = styled.div`
   }
   @media screen and (max-width: 400px) {
     width: 200px;
-    height : 40px;
+    height: 40px;
     span {
-      line-height : 40px
+      line-height: 40px;
     }
   }
 `;

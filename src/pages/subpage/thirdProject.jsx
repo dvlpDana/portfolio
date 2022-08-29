@@ -15,15 +15,14 @@ import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
 function ThirdProjectViewer() {
-  return(
+  return (
     <>
       <Outlet />
     </>
-  )
+  );
 }
 
 function ThirdProject() {
-
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -52,7 +51,10 @@ function ThirdProject() {
               setSubSideNav(!subSideNav);
             }}
           >
-            <ToggleButton shadow="rgba(51, 102, 51, 0.16)" background="#336633" />
+            <ToggleButton
+              shadow="rgba(51, 102, 51, 0.16)"
+              background="#336633"
+            />
           </div>
         </section>
       </Mobile>
@@ -151,7 +153,12 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
+        <div
+          className={`${styles.backBtn}`}
+          onClick={() => {
+            props.setSubSideNav(!props.subSideNav);
+          }}
+        >
           <span></span>
           <span></span>
         </div>
@@ -165,18 +172,22 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle} ${styles.thirdProject}`}>살루테유모 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.thirdProject}`}>
+            살루테유모 리뉴얼
+          </h1>
           <span className={`${styles.infoSubTitle}`}>
             "브랜드 아이덴티티 강조 및 상품에 대한 필수 정보 제공으로 매출 상승"
           </span>
           <div className={`${styles.info}`}>
-            고급 올리브유 및 발사믹 식초를 수입 ・ 판매하는 살루테유모의 브랜드 아이덴티티를
-            효과적으로 전달할 수 있도록 이미지에 부합하는 포인트 컬러를 선정하였습니다. 또한
-            아이콘 및 버튼 등을 통일감 있게 사용하여 안정감을 주고자 하였습니다.
+            고급 올리브유 및 발사믹 식초를 수입 ・ 판매하는 살루테유모의 브랜드
+            아이덴티티를 효과적으로 전달할 수 있도록 이미지에 부합하는 포인트
+            컬러를 선정하였습니다. 또한 아이콘 및 버튼 등을 통일감 있게 사용하여
+            안정감을 주고자 하였습니다.
             <p>
-              뿐만 아니라 사용자의 연령층을 고려하여 자주 찾는 정보는 별도의 배너로 제작하여
-              쉽게 접근할 수 있도록 하였고, 해당 브랜드에 대한 간단한 소개를 메인 인덱스에 노출하여
-              브랜드에 대한 홍보를 하고자 하였습니다.
+              뿐만 아니라 사용자의 연령층을 고려하여 자주 찾는 정보는 별도의
+              배너로 제작하여 쉽게 접근할 수 있도록 하였고, 해당 브랜드에 대한
+              간단한 소개를 메인 인덱스에 노출하여 브랜드에 대한 홍보를 하고자
+              하였습니다.
             </p>
           </div>
         </div>
@@ -195,7 +206,9 @@ function ProjectInfo() {
           </p>
           <h2 className={`${styles.boxTitle}`}>main function</h2>
           <ol className={`${styles.functionListCon}`}>
-            <li>gsap 라이브러리 사용하여 사용자의 스크롤 움직임에 따른 effect 적용</li>
+            <li>
+              gsap 라이브러리 사용하여 사용자의 스크롤 움직임에 따른 effect 적용
+            </li>
             <li>JQuery로 carousel_slide, pagenation 기능 구현</li>
             <li>JQuery로 탭 메뉴 및 '관심상품' 모달창 기능 구현</li>
             <li>HTML, CSS로 로그인창 구현</li>
@@ -266,7 +279,9 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <div
-            onClick={()=>{navigate("/third-project/proposal")}}
+            onClick={() => {
+              navigate("/third-project/proposal");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -280,7 +295,9 @@ function ProjectDocuments() {
             <span>살루테유모_기획서.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/third-project/wireframe")}}
+            onClick={() => {
+              navigate("/third-project/wireframe");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -294,7 +311,9 @@ function ProjectDocuments() {
             <span>살루테유모_와이어프레임.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/third-project/styleguide")}}
+            onClick={() => {
+              navigate("/third-project/styleguide");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -313,4 +332,4 @@ function ProjectDocuments() {
   );
 }
 
-export {ThirdProjectViewer, ThirdProject};
+export { ThirdProjectViewer, ThirdProject };

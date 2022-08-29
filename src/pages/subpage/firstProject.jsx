@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styles from "./project.module.css";
 
 import { useNavigate, Outlet } from "react-router-dom";
@@ -15,15 +15,14 @@ import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
 function FirstProjectViewer() {
-  return(
+  return (
     <>
-      <Outlet/>
+      <Outlet />
     </>
-  )
+  );
 }
 
 function FirstProject() {
-
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -41,7 +40,7 @@ function FirstProject() {
 
       <Mobile>
         <section className={`${styles.secBg}`}>
-        {subSideNav === true ? (
+          {subSideNav === true ? (
             <SubSideNav subSideNav={subSideNav} setSubSideNav={setSubSideNav} />
           ) : null}
           <ProjectInfo />
@@ -52,7 +51,10 @@ function FirstProject() {
               setSubSideNav(!subSideNav);
             }}
           >
-            <ToggleButton shadow="rgba(59, 136, 217, 0.16)" background="#3b88d9" />
+            <ToggleButton
+              shadow="rgba(59, 136, 217, 0.16)"
+              background="#3b88d9"
+            />
           </div>
         </section>
       </Mobile>
@@ -151,7 +153,12 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={()=>{props.setSubSideNav(!props.subSideNav);}}>
+        <div
+          className={`${styles.backBtn}`}
+          onClick={() => {
+            props.setSubSideNav(!props.subSideNav);
+          }}
+        >
           <span></span>
           <span></span>
         </div>
@@ -165,7 +172,9 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle} ${styles.firstProject}`}>k-mooc 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.firstProject}`}>
+            k-mooc 리뉴얼
+          </h1>
           <span className={`${styles.infoSubTitle}`}>
             "유용성과 사용성을 모두 충족한 UI ・ UX 디자인 개선"
           </span>
@@ -267,7 +276,9 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <div
-            onClick={() => {navigate("/first-project/proposal")}}
+            onClick={() => {
+              navigate("/first-project/proposal");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -281,7 +292,9 @@ function ProjectDocuments() {
             <span>K-MOOC_기획서.pdf</span>
           </div>
           <div
-            onClick={() => {navigate("/first-project/wireframe")}}
+            onClick={() => {
+              navigate("/first-project/wireframe");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -295,7 +308,9 @@ function ProjectDocuments() {
             <span>K-MOOC_와이어프레임.pdf</span>
           </div>
           <div
-            onClick={() => {navigate("/first-project/styleguide")}}
+            onClick={() => {
+              navigate("/first-project/styleguide");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -314,4 +329,4 @@ function ProjectDocuments() {
   );
 }
 
-export {FirstProjectViewer, FirstProject};
+export { FirstProjectViewer, FirstProject };

@@ -33,20 +33,19 @@ function ContactSlide() {
       name: "",
       email: "",
       phone: "",
-      message: "",
+      message: ""
     });
 
     setContactMeModal(!contactMeModal);
 
     setChecked(false);
-
   };
 
   const [mailContent, setMailContent] = useState({
     name: "",
     email: "",
     phone: "",
-    message: "",
+    message: ""
   });
 
   const { name, email, phone, message } = mailContent;
@@ -190,21 +189,26 @@ function ContactSlide() {
                   />
                 </div>
                 <div className={`${styles.agree}`}>
-                  <input id="checkAgree" type="checkbox" checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+                  <input
+                    id="checkAgree"
+                    type="checkbox"
+                    checked={checked}
+                    onChange={(e) => setChecked(e.target.checked)}
+                  />
                   <label htmlFor="checkAgree">
-                    <span className={`${styles.agreeSign}`}><strong>✓</strong></span>
+                    <span className={`${styles.agreeSign}`}>
+                      <strong>✓</strong>
+                    </span>
                     <p>
-                    제공한 정보는 연락의 목적으로만 사용되며, 목적 이외의
-                    용도로는 사용되지 않습니다. 메일 전송에 동의합니다.
-                  </p>
+                      제공한 정보는 연락의 목적으로만 사용되며, 목적 이외의
+                      용도로는 사용되지 않습니다. 메일 전송에 동의합니다.
+                    </p>
                   </label>
                 </div>
                 <div className={`${styles.submit}`}>
                   <input
                     disabled={
-                      isValidEmail && isValidInput && checked
-                        ? false
-                        : true
+                      isValidEmail && isValidInput && checked ? false : true
                     }
                     type="submit"
                     value="Send"

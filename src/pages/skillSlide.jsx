@@ -2,13 +2,18 @@ import styles from "./css/skillSlide.module.css";
 import { useSwiperSlide } from "swiper/react";
 
 function SkillSlide() {
-
   const swiperSlide = useSwiperSlide();
 
   return (
     <section className={`${styles.secBg}`}>
       <ol className={`${styles.skillListCon}`}>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/html.png`}
@@ -20,7 +25,13 @@ function SkillSlide() {
             작성합니다
           </p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/JS.png`}
@@ -32,7 +43,13 @@ function SkillSlide() {
             구현합니다
           </p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/css.png`}
@@ -44,7 +61,13 @@ function SkillSlide() {
             제작합니다
           </p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/react.png`}
@@ -56,7 +79,13 @@ function SkillSlide() {
             개발합니다
           </p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/Jquery.png`}
@@ -68,7 +97,13 @@ function SkillSlide() {
             구현합니다
           </p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/illustrator.png`}
@@ -77,7 +112,13 @@ function SkillSlide() {
           </div>
           <p>간단한 로고 및 아이콘을 제작할 수 있습니다</p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/photoshop.png`}
@@ -86,7 +127,13 @@ function SkillSlide() {
           </div>
           <p>웹 개발에 적절하게 이미지를 편집하고 수정할 수 있습니다</p>
         </li>
-        <li className={swiperSlide.isActive ? `${styles.skillList} ${styles.active}` :  `${styles.skillList}`}>
+        <li
+          className={
+            swiperSlide.isActive
+              ? `${styles.skillList} ${styles.active}`
+              : `${styles.skillList}`
+          }
+        >
           <div>
             <img
               src={`${process.env.PUBLIC_URL}/img/icons/git.png`}

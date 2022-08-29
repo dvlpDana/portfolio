@@ -197,12 +197,10 @@
   .backBtn span {
     height: 1.5px;
   }
-  
 }
 
-@media (max-width : 500px) {
-
-  .sideNav li{
+@media (max-width: 500px) {
+  .sideNav li {
     font-size: 1.75rem;
   }
 

@@ -198,11 +198,11 @@
 }
 
 /* ----sixthProject videoCon---- */
-.videoCon.sixthProject{
+.videoCon.sixthProject {
   width: 80%;
 }
 
-.videoCon.sixthProject video{
+.videoCon.sixthProject video {
   max-width: 1820px;
 }
 
@@ -301,7 +301,7 @@
 }
 .subSideNav.sixthProject {
   background-color: var(--sixth-project-color);
-  color: #9B9165;
+  color: #9b9165;
 }
 
 /* ----boxHashTag---- */
@@ -374,7 +374,9 @@
     opacity: 1;
   }
 
-  .subSideNav:hover +.projectInfoCon {margin-left: 200px;}
+  .subSideNav:hover + .projectInfoCon {
+    margin-left: 200px;
+  }
 
   .subSideMenu {
     visibility: hidden;
@@ -400,7 +402,6 @@
     left: 50%;
     transform: translateX(-50%);
   }
-
 
   .goToIndexBtn span {
     display: none;
@@ -640,7 +641,6 @@
 }
 
 @media (max-width: 500px) {
-
   .secBg {
     padding: 2rem 0;
   }
@@ -656,7 +656,7 @@
   .infoTitle {
     font-size: 2rem;
   }
-  
+
   .infoSubTitle {
     font-size: 1.25rem;
   }

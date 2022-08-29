@@ -7,14 +7,14 @@ const StyledButton = styled.button`
   top: 1.5rem;
   width: 50px;
   height: 50px;
-  padding : 10px 0;
-  display : flex;
+  padding: 10px 0;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content : space-evenly;
+  justify-content: space-evenly;
   border-radius: 50%;
   cursor: pointer;
-  z-index : 100;
+  z-index: 100;
   background-color: white;
   border-style: none;
   transition: 0.3s;
@@ -22,7 +22,7 @@ const StyledButton = styled.button`
   &:hover {
     background-color: ${(props) => props.background};
     span {
-      background-color : white;
+      background-color: white;
     }
   }
   span {
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   @media only screen and (max-width: 768px) {
     width: 35px;
     height: 35px;
-    padding : 5px 0;
+    padding: 5px 0;
     right: 2rem;
     top: 2rem;
     span {

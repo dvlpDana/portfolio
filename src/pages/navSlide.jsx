@@ -82,12 +82,12 @@ function NavSlide() {
           />
         </div>
       </div>
-      <div className={`${styles.linkGithub}`} onClick={() =>
-              window.open(
-                "https://github.com/dvlpDana/portfolio",
-                "_blank"
-              )
-            }>
+      <div
+        className={`${styles.linkGithub}`}
+        onClick={() =>
+          window.open("https://github.com/dvlpDana/portfolio", "_blank")
+        }
+      >
         <img
           src={`${process.env.PUBLIC_URL}/img/svg/puzzle_07.svg`}
           alt="link_github"

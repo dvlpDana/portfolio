@@ -25,19 +25,54 @@ import PortfolioSlide from "./pages/portfolioSlide.jsx";
 import ContactSlide from "./pages/contactSlide.jsx";
 
 // subpage
-import {FirstProjectViewer, FirstProject} from "./pages/subpage/firstProject.jsx";
-import {SecondProjectViewer ,SecondProject} from "./pages/subpage/secondProject.jsx";
-import {ThirdProjectViewer ,ThirdProject} from "./pages/subpage/thirdProject.jsx";
-import {FourthProjectViewer, FourthProject} from "./pages/subpage/fourthProject.jsx";
-import {FifthProjectViewer, FifthProject} from "./pages/subpage/fifthProject.jsx";
+import {
+  FirstProjectViewer,
+  FirstProject
+} from "./pages/subpage/firstProject.jsx";
+import {
+  SecondProjectViewer,
+  SecondProject
+} from "./pages/subpage/secondProject.jsx";
+import {
+  ThirdProjectViewer,
+  ThirdProject
+} from "./pages/subpage/thirdProject.jsx";
+import {
+  FourthProjectViewer,
+  FourthProject
+} from "./pages/subpage/fourthProject.jsx";
+import {
+  FifthProjectViewer,
+  FifthProject
+} from "./pages/subpage/fifthProject.jsx";
 import SixthProject from "./pages/subpage/sixthProject.jsx";
 
 // pdf
-import {FirstProjectProposal, FirstProjectWireframe, FirstProjectStyleguide} from "./pages/pdfpage/firstProjectPdf";
-import {SecondProjectProposal, SecondProjectWireframe, SecondProjectStyleguide} from "./pages/pdfpage/secondProjectPdf";
-import {ThirdProjectProposal, ThirdProjectWireframe, ThirdProjectStyleguide} from "./pages/pdfpage/thirdProjectPdf";
-import {FourthProjectProposal, FourthProjectWireframe, FourthProjectStyleguide} from "./pages/pdfpage/fourthProjectPdf";
-import {FifthProjectProposal, FifthProjectWireframe, FifthProjectStyleguide} from "./pages/pdfpage/fifthProjectPdf";
+import {
+  FirstProjectProposal,
+  FirstProjectWireframe,
+  FirstProjectStyleguide
+} from "./pages/pdfpage/firstProjectPdf";
+import {
+  SecondProjectProposal,
+  SecondProjectWireframe,
+  SecondProjectStyleguide
+} from "./pages/pdfpage/secondProjectPdf";
+import {
+  ThirdProjectProposal,
+  ThirdProjectWireframe,
+  ThirdProjectStyleguide
+} from "./pages/pdfpage/thirdProjectPdf";
+import {
+  FourthProjectProposal,
+  FourthProjectWireframe,
+  FourthProjectStyleguide
+} from "./pages/pdfpage/fourthProjectPdf";
+import {
+  FifthProjectProposal,
+  FifthProjectWireframe,
+  FifthProjectStyleguide
+} from "./pages/pdfpage/fifthProjectPdf";
 
 function App() {
   return (
@@ -55,34 +90,33 @@ function App() {
 
         <Route path="second-project/" element={<SecondProjectViewer />}>
           <Route index element={<SecondProject />} />
-          <Route path="proposal" element={<SecondProjectProposal/>} />
-          <Route path="wireframe" element={<SecondProjectWireframe/>} />
-          <Route path="styleguide" element={<SecondProjectStyleguide/>} />
-        </Route>        
+          <Route path="proposal" element={<SecondProjectProposal />} />
+          <Route path="wireframe" element={<SecondProjectWireframe />} />
+          <Route path="styleguide" element={<SecondProjectStyleguide />} />
+        </Route>
 
         <Route path="third-project/" element={<ThirdProjectViewer />}>
-          <Route index element={<ThirdProject />} />          
-          <Route path="proposal" element={<ThirdProjectProposal/>} />
-          <Route path="wireframe" element={<ThirdProjectWireframe/>} />
-          <Route path="styleguide" element={<ThirdProjectStyleguide/>} />
-        </Route>  
+          <Route index element={<ThirdProject />} />
+          <Route path="proposal" element={<ThirdProjectProposal />} />
+          <Route path="wireframe" element={<ThirdProjectWireframe />} />
+          <Route path="styleguide" element={<ThirdProjectStyleguide />} />
+        </Route>
 
         <Route path="fourth-project/" element={<FourthProjectViewer />}>
-          <Route index element={<FourthProject  />} />  
-          <Route path="proposal" element={<FourthProjectProposal/>} />
-          <Route path="wireframe" element={<FourthProjectWireframe/>} />
-          <Route path="styleguide" element={<FourthProjectStyleguide/>} />
-        </Route>  
-        
+          <Route index element={<FourthProject />} />
+          <Route path="proposal" element={<FourthProjectProposal />} />
+          <Route path="wireframe" element={<FourthProjectWireframe />} />
+          <Route path="styleguide" element={<FourthProjectStyleguide />} />
+        </Route>
+
         <Route path="fifth-project/" element={<FifthProjectViewer />}>
-          <Route index element={<FifthProject />} />  
-          <Route path="proposal" element={<FifthProjectProposal/>} />
-          <Route path="wireframe" element={<FifthProjectWireframe/>} />
-          <Route path="styleguide" element={<FifthProjectStyleguide/>} />
-        </Route>  
-       
+          <Route index element={<FifthProject />} />
+          <Route path="proposal" element={<FifthProjectProposal />} />
+          <Route path="wireframe" element={<FifthProjectWireframe />} />
+          <Route path="styleguide" element={<FifthProjectStyleguide />} />
+        </Route>
+
         <Route path="sixth-project" element={<SixthProject />} />
-       
       </Routes>
     </>
   );
@@ -124,7 +158,8 @@ function MainIndex() {
             <ContactSlide />
           </SwiperSlide>
 
-          <div slot="container-end"
+          <div
+            slot="container-end"
             onClick={() => {
               setSideNav(!sideNav);
             }}
@@ -165,7 +200,8 @@ function MainIndex() {
             <ContactSlide />
           </SwiperSlide>
 
-          <div slot="container-end"
+          <div
+            slot="container-end"
             onClick={() => {
               setSideNav(!sideNav);
             }}
@@ -176,7 +212,6 @@ function MainIndex() {
           {sideNav === true ? (
             <SideNav sideNav={sideNav} setSideNav={setSideNav} />
           ) : null}
-
         </Swiper>
       </Mobile>
     </>

@@ -6,30 +6,28 @@ import proposalPdf from "../../pdf/proposal/project_3_proposal.pdf";
 import wireframePdf from "../../pdf/wireframe/project_3_wireframe.pdf";
 import styleguidePdf from "../../pdf/styleguide/project_3_styleguide.pdf";
 
-
-
 const ThirdProjectProposal = () => {
-  return(
+  return (
     <div className="pdfCon">
-      <AllPagePdf pdf={proposalPdf}/>
+      <AllPagePdf pdf={proposalPdf} />
     </div>
-  )
+  );
 };
 
 const ThirdProjectWireframe = () => {
-  return(
+  return (
     <div className="pdfCon">
-      <AllPagePdf pdf={wireframePdf}/>
+      <AllPagePdf pdf={wireframePdf} />
     </div>
-  )
+  );
 };
 
 const ThirdProjectStyleguide = () => {
-  return(
+  return (
     <div className="pdfCon thirdProject">
-      <AllPagePdf pdf={styleguidePdf}/>
+      <AllPagePdf pdf={styleguidePdf} />
     </div>
-  )
+  );
 };
 
-export {ThirdProjectProposal, ThirdProjectWireframe, ThirdProjectStyleguide};
+export { ThirdProjectProposal, ThirdProjectWireframe, ThirdProjectStyleguide };

@@ -15,15 +15,14 @@ import "swiper/css/effect-cards";
 import { EffectCards, Autoplay } from "swiper";
 
 function SecondProjectViewer() {
-  return(
+  return (
     <>
-      <Outlet/>
+      <Outlet />
     </>
-  )
+  );
 }
 
 function SecondProject() {
-
   const [subSideNav, setSubSideNav] = useState(false);
 
   return (
@@ -52,7 +51,10 @@ function SecondProject() {
               setSubSideNav(!subSideNav);
             }}
           >
-            <ToggleButton shadow="rgba(56, 113, 192, 0.16)" background="#3871c0" />
+            <ToggleButton
+              shadow="rgba(56, 113, 192, 0.16)"
+              background="#3871c0"
+            />
           </div>
         </section>
       </Mobile>
@@ -151,7 +153,12 @@ function SubSideNav(props) {
             <span>source</span>
           </div>
         </div>
-        <div className={`${styles.backBtn}`} onClick={() => { props.setSubSideNav(!props.subSideNav); }}>
+        <div
+          className={`${styles.backBtn}`}
+          onClick={() => {
+            props.setSubSideNav(!props.subSideNav);
+          }}
+        >
           <span></span>
           <span></span>
         </div>
@@ -165,17 +172,21 @@ function ProjectInfo() {
     <>
       <div className={`${styles.projectInfoCon}`}>
         <div className={`${styles.projectInfoTxt}`}>
-          <h1 className={`${styles.infoTitle} ${styles.secondProject}`}>대구트립로드 리뉴얼</h1>
+          <h1 className={`${styles.infoTitle} ${styles.secondProject}`}>
+            대구트립로드 리뉴얼
+          </h1>
           <span className={`${styles.infoSubTitle}`}>
             "사용자 요구에 적합한 콘텐츠의 접근성 향상"
           </span>
           <div className={`${styles.info}`}>
-            다른 사이트와는 차별화되는 대구트립로드 만의 매력적인 콘텐츠 중 사용자가
-            자주 찾는 내용을 선별후, 이를 정리하여 홈페이지의 첫 화면에 배치하였습니다.
+            다른 사이트와는 차별화되는 대구트립로드 만의 매력적인 콘텐츠 중
+            사용자가 자주 찾는 내용을 선별후, 이를 정리하여 홈페이지의 첫 화면에
+            배치하였습니다.
             <p>
-              이를 통해 사용자는 기존의 사이트와 비교하여 필요한 정보를 바로 찾을 수 있어
-              편의성이 향상될 것이고, 정보제공자인 대구 문화 관광에서는 대구의 주요 사업을
-              압축적으로 사이트를 방문하는 사용자에게 전달할 수 있을 것입니다.
+              이를 통해 사용자는 기존의 사이트와 비교하여 필요한 정보를 바로
+              찾을 수 있어 편의성이 향상될 것이고, 정보제공자인 대구 문화
+              관광에서는 대구의 주요 사업을 압축적으로 사이트를 방문하는
+              사용자에게 전달할 수 있을 것입니다.
             </p>
           </div>
         </div>
@@ -194,9 +205,15 @@ function ProjectInfo() {
           </p>
           <h2 className={`${styles.boxTitle}`}>main function</h2>
           <ol className={`${styles.functionListCon}`}>
-            <li>OpenWeatherMap API를 사용하여 날씨 데이터를 받아와 대구의 현재 날씨 출력하는 기능 구현</li>
+            <li>
+              OpenWeatherMap API를 사용하여 날씨 데이터를 받아와 대구의 현재
+              날씨 출력하는 기능 구현
+            </li>
             <li>반응형 웹에 적합한 Swiper 슬라이드 기능 구현</li>
-            <li>JS 내장 함수인 date 사용하여 현재 날짜, 요일, 시간 출력하는 기능 구현</li>
+            <li>
+              JS 내장 함수인 date 사용하여 현재 날짜, 요일, 시간 출력하는 기능
+              구현
+            </li>
           </ol>
         </div>
       </div>
@@ -264,7 +281,9 @@ function ProjectDocuments() {
         </Swiper>
         <div className={`${styles.btnDownLoaderCon}`}>
           <div
-            onClick={()=>{navigate("/second-project/proposal")}}
+            onClick={() => {
+              navigate("/second-project/proposal");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -278,7 +297,9 @@ function ProjectDocuments() {
             <span>대구트립로드_기획서.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/second-project/wireframe")}}
+            onClick={() => {
+              navigate("/second-project/wireframe");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -292,7 +313,9 @@ function ProjectDocuments() {
             <span>대구트립로드_와이어프레임.pdf</span>
           </div>
           <div
-            onClick={()=>{navigate("/second-project/styleguide")}}
+            onClick={() => {
+              navigate("/second-project/styleguide");
+            }}
             target="b_blank"
             className={`${styles.btnDownLoader}`}
           >
@@ -311,4 +334,4 @@ function ProjectDocuments() {
   );
 }
 
-export {SecondProjectViewer, SecondProject};
+export { SecondProjectViewer, SecondProject };
