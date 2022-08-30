@@ -122,7 +122,7 @@ function SubSideNav(props) {
             className={`${styles.circleBtn}`}
             onClick={() =>
               window.open(
-                "https://dvlpdana.github.io/onel-ramyun-renewal-project-2022/",
+                "https://dvlpdana.github.io/Onel-ramyun-renewal-project-2022/",
                 "_blank"
               )
             }
@@ -139,7 +139,7 @@ function SubSideNav(props) {
             className={`${styles.circleBtn}`}
             onClick={() =>
               window.open(
-                "https://github.com/dvlpDana/onel-ramyun-renewal-project-2022",
+                "https://github.com/dvlpDana/Onel-ramyun-renewal-project-2022",
                 "_blank"
               )
             }
