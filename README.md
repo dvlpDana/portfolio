@@ -1,4 +1,4 @@
-# Portfolio 사이트 제작(22.07.07~22.07.19)
+# Portfolio 사이트 제작(22.08.08~22.08.29)
 
 ![portfolio_mockup](https://user-images.githubusercontent.com/102039456/187333876-62bd4858-838d-41c4-b599-c6e411c636fb.jpg)
 
